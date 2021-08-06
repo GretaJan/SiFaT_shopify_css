@@ -1,0 +1,96 @@
+
+
+@mixin sideWrap {
+    padding-left: 4vw !important; 
+    padding-right: 4vw !important;  
+
+    @media #{$desktop} {
+        padding-left: 2vw !important; 
+        padding-right: 2vw !important; 
+        // max-width: 1530px !important; 
+        max-width: 1408px !important; 
+        margin-left: auto !important; 
+        margin-right: auto !important; 
+    }
+ 
+
+    @media #{$fullhd} {
+        padding-left: .5vw !important; 
+        padding-right: .5vw !important; 
+    }
+}
+
+
+@mixin verticalWrap-tiny-top {
+    padding-top: 10px !important; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+@mixin verticalWrap-tiny-bottom {
+    padding-bottom: 10px !important; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+@mixin verticalWrap-tiny {
+   @include verticalWrap-tiny-bottom; 
+   @include verticalWrap-tiny-top; 
+}
+
+@mixin verticalWrap-top {
+    padding-top: 1.5rem; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important;
+    @media #{$desktop} {
+        padding-top: 3rem; 
+    }
+}
+
+@mixin verticalWrap-bottom {
+    padding-bottom: 1.5rem; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important;
+    @media #{$desktop} {
+        padding-bottom: 3rem; 
+    }
+}
+
+
+@mixin verticalWrap {
+   @include verticalWrap-top;
+   @include verticalWrap-bottom;
+}
+
+@mixin verticalWrap-large-top {
+    padding-top: 4rem!important; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important; 
+    @media #{$desktop} {
+        padding-top: 7rem!important;  
+    }
+}
+
+@mixin verticalWrap-large-bottom {
+    padding-bottom: 4rem!important; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important; 
+    @media #{$desktop} {
+        padding-bottom: 7rem!important; 
+    }
+}
+
+@mixin verticalWrap-large {
+    @include verticalWrap-large-top;
+    @include verticalWrap-large-bottom;
+}
+
+@mixin verticalWrap-larger {
+    @include verticalWrap-top;
+    @include verticalWrap-bottom;
+}
+
+
+@mixin transition {
+    transition: all .4s ease-in-out;
+}

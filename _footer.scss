@@ -1,0 +1,120 @@
+footer {
+    .site-footer-wrapper {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0 !important;
+    }
+
+    h2 {
+        margin-bottom: 30px !important;
+    }
+
+    .site-footer-item {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .site-footer-item:first-child {
+        @include  verticalWrap-large;
+        background: $black;
+
+        .site-footer-blocks {
+            @include sideWrap; 
+
+            .site-footer-block-item {
+                margin-right: 0;
+            }
+
+        }
+
+        .site-footer-block-item:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            
+            .site-footer-block-content {
+                order: 3;
+            }
+        }
+        
+   
+
+        .site-footer-block-item:nth-child(2) {
+            .site-footer-block-content  {
+
+                p:not(:last-child) {
+                    margin-bottom: 35px;
+                }
+
+                a {
+                    display: block;
+                }
+             
+            }
+        }
+
+        .site-footer-block-item:last-child {
+
+            .site-footer-block-title  {
+                display: none !important;
+            }
+        }
+    }
+
+    .form-fields-inline {
+        display: block;
+    }
+
+    .site-footer-item:last-child {
+        background-color: #1A2C54;
+    }
+
+    .site-footer-information {
+        margin-top: 0;
+        @include verticalWrap-tiny;
+        @include sideWrap; 
+        .navmenu {
+            display: none !important;
+        }
+    }
+
+}
+
+@media #{$desktop} {
+
+    footer {
+
+        .site-footer-item:first-child {
+
+            .site-footer-item {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .site-footer-blocks {
+                justify-content: space-between !important; 
+                flex-wrap: wrap !important;
+
+                .site-footer-block-item {
+                    padding: 0;
+                    width: 20% !important;
+                    min-width: 280px !important;
+                }
+                .site-footer-block-item:not(:last-child) {
+                    margin-right: 70px;
+                }
+
+                .site-footer-block-item:last-child {
+                    margin-right: 0;
+                }
+
+                .site-footer-block-item:nth-child(3) {
+                    width: 280px;
+                }
+            }
+        }
+
+    }
+}

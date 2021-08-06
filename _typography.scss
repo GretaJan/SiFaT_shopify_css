@@ -1,0 +1,274 @@
+@font-face {
+    font-family: "Kanit";
+    src: url('Kanit-Bold.woff') format("woff");
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Kanit";
+    src: url('Kanit-BoldItalic.woff') format("woff");
+    font-weight: 700;
+    font-style: bold italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url('Kanit-SemiBold.woff') format("woff");
+    font-weight: 600;
+    font-style: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url('Kanit-SemiBoldItalic.woff') format("woff");
+    font-weight: 600;
+    font-style: bold italic lighter;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url('Kanit-Light.woff') format("woff");
+    font-weight: 400;
+    font-style: light;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Kanit";
+    src: url('Kanit-LightItalic.woff') format("woff");
+    font-weight: 400;
+    font-style: light italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url('manrope-extrabold.woff') format("woff");
+    font-weight: 800;
+    font-style: extrabold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MinionPro";
+    src: url('MinionPro-Regular.woff') format("woff");
+    font-weight: 500;
+    font-style: regular;
+    font-display: swap;
+}
+
+html {
+    font-size: 62.5% !important;
+    color: $black;
+    font-family: "Kanit" !important;
+    font-weight: 400;
+}
+
+$fonts: (
+    "h1" : 8rem,
+    "h2" : 5rem, 
+	"h3" : 3.6rem, 
+    "h4" : 3.2rem, 
+/*     "h4" : 2rem, */
+/*     "h5" : 2rem, */
+    "h6" : 2.3rem,
+    "p": 2.6rem, 
+/*     "li": 1.5rem,  */
+/*     "a": 1.5rem  */
+);
+
+@each $name, $value in $fonts {
+    #{$name} {
+        font-size: $value !important;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-style: italic !important;
+    font-weight: 700 !important;
+    line-height: 1.2em;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: "Kanit" !important;
+}
+
+h2 {
+    margin-bottom: 30px;
+    margin-top: 0 !important;
+}
+
+div p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+html body a {
+    text-decoration: none !important;
+}
+
+.announcement-bar-text {
+    a {
+        font-size: 1.6rem !important;
+        font-weight: 700;
+    }
+}
+
+section.slideshow {
+    .slideshow-slide__heading {
+        font-size: 8rem !important;
+    }
+
+    .slideshow-slide__text {
+        font-size: 2.6rem !important;
+        font-weight: 300 !important;
+        font-style: italic;
+    }
+
+    .slideshow-slide__paragraph {
+        font-size: 2.6rem !important;
+        font-weight: 300 !important;
+    }
+
+    .slideshow-slide__button {
+        font-size: 3.3rem !important;
+    }
+}
+
+header {
+    
+    .navmenu-depth-1 {
+        li {
+            a {
+                font-size: 2.2rem !important;
+                color: $whiteColor !important;
+                font-weight: 400 !important;
+            }
+        }
+    }
+
+
+    .navmenu-depth-2 {
+
+        li {
+            a {
+                color: $darkBlue !important;
+            }
+        }
+        & > .navmenu-item-parent {
+            a {
+                font-weight: 700;
+                font-size: 2.7rem !important;
+            }
+
+           & > .navmenu-item-parent {
+               a {
+                    font-weight: 700;
+                    font-size: 2.5rem !important;
+               }
+           }
+        }
+    }
+}
+
+.promo-grid--section {
+	.promo-grid__columns--4 {
+		h2, p, h4 {
+			color: $whiteColor !important;
+		}
+    }
+
+    .img-top {
+        p, a, h1, h2, h3, h4, h5, h4, span {
+            color: $black !important;
+        }
+        .button-primary {
+            
+            &:hover {
+                color: $lightBlue !important;
+            }
+		}
+    }
+}
+
+@media (max-width: 1550px) {
+    header {
+        .navmenu-depth-1 {
+            li {
+                a {
+                    font-size: 2rem !important;
+                }
+            }
+        }
+    }
+} 
+  
+ html body .btn, button {
+   font-size: 3.3rem !important;
+   font-style: italic !important;
+ }
+
+ .products-carousel {
+    h6 a {
+        font-size: 2.3rem !important;
+        font-weight: 400;
+        line-height: 1.2em;
+    }
+
+    h4 a {
+        font-size: 3.2rem !important;
+        font-weight: 400;
+        line-height: 1.2em;
+        // font-weight: 700;
+    }
+
+    .white {
+        a, p {
+            color: $darkBlue;
+        }
+    }
+
+    .blue {
+        a, p {
+            color: $whiteColor;
+        }
+    }
+
+    .white, .blue {
+
+        &:hover
+        a {
+            color: $lightBlue !important;
+        }
+    }
+}
+  
+html body footer {
+  p, a, h2 {
+      font-size: 2.2rem !important;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, li, a {
+      color: $whiteColor !important;
+  }
+
+  a:hover {
+    color: $lightBlue !important;
+  }
+
+
+
+    .site-footer-item:nth-child(1) {
+        .site-footer-blocks {
+            .site-footer-block-item:nth-child(2) {
+                a {
+                    color: $lightBlue !important;
+                }
+            }
+        }
+    }
+ 
+}
