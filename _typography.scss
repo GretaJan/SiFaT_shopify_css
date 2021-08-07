@@ -81,10 +81,29 @@ $fonts: (
 /*     "a": 1.5rem  */
 );
 
+
+$mobileFonts: (
+    "h1" : 6.5rem,
+    "h2" : 3.5rem, 
+	"h3" : 2.2rem, 
+    "h4" : 2.5rem, 
+    "h6" : 2rem,
+    "p": 2.3rem, 
+);
+
 @each $name, $value in $fonts {
     #{$name} {
         font-size: $value !important;
     }
+}
+
+@media #{$mobile} {
+    @each $name, $value in $mobileFonts {
+        #{$name} {
+            font-size: $value !important;
+        }
+    }
+    
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -117,9 +136,30 @@ html body a {
     }
 }
 
+.textAlignLeft {
+    h1, h2, h3, h4, h5, p {
+        text-align: left;
+    }
+}
+.textAlignRight {
+    h1, h2, h3, h4, h5, p {
+        display: block;
+        text-align: right;
+    }
+}
+.textAlignCenter {
+    h1, h2, h3, h4, h5, p {
+        display: block;
+        text-align: center;
+    }
+}
+
+
 section.slideshow {
     .slideshow-slide__heading {
         font-size: 8rem !important;
+        font-weight: 700 !important;
+        line-height: 1em !important;
     }
 
     .slideshow-slide__text {
@@ -206,9 +246,14 @@ header {
     }
 } 
   
- html body .btn, button {
+ html body .btn, button, .button-primary:not(footer > .button-primary) {
    font-size: 3.3rem !important;
    font-style: italic !important;
+ }
+
+ footer > .button-primary {
+    font-size: 2.2rem !important;
+    font-style: italic !important;
  }
 
  .products-carousel {

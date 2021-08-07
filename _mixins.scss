@@ -7,7 +7,6 @@
     @media #{$desktop} {
         padding-left: 2vw !important; 
         padding-right: 2vw !important; 
-        // max-width: 1530px !important; 
         max-width: 1408px !important; 
         margin-left: auto !important; 
         margin-right: auto !important; 
@@ -93,4 +92,21 @@
 
 @mixin transition {
     transition: all .4s ease-in-out;
+}
+
+@mixin fitContentWidth {
+    width: fit-content !important;
+    width: -moz-fit-content !important;
+    width: intrinsic !important;
+    width: -moz-max-content !important;
+    width: -webkit-max-content !important;
+}
+
+
+@mixin fitContentHeight {
+    height: fit-content !important;
+    height: -moz-fit-content !important;
+    height: intrinsic !important;
+    height: -moz-max-content !important;
+    height: -webkit-max-content !important;
 }

@@ -5,18 +5,13 @@
 .newsletter-submit button, .slideshow-slide__button, .button-primary, .btn-outline-dark {
     background-color: transparent !important;
     font-weight: 700 !important;
-    font-size: 2.2rem !important;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: .3em 1em !important;
     @include transition;
     margin-top: 30px !important;
-    width: fit-content !important;
-    width: -moz-fit-content !important;
-    width: intrinsic !important;
-    width: -moz-max-content !important;
-    width: -webkit-max-content !important;
+    @include fitContentWidth;
     border-radius: 3px;
     &::before {
         display: none !important;
