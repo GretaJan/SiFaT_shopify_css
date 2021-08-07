@@ -89,6 +89,34 @@
     @include verticalWrap-bottom;
 }
 
+@mixin verticalWrap-xlarge-top {
+    padding-bottom: .9rem!important; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important; 
+    @media #{$desktop} {
+        padding-bottom: 1.4rem!important; 
+    }
+}
+
+@mixin verticalWrap-xlarge-bottom {
+    padding-bottom: .9rem!important; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important; 
+    @media #{$desktop} {
+        padding-bottom: 1.4rem!important; 
+    }
+}
+
+@mixin verticalWrap-xlarge {
+    @include verticalWrap-large-top;
+    @include verticalWrap-large-bottom;
+}
+
+@mixin verticalWrap-xlarge {
+    @include verticalWrap-top;
+    @include verticalWrap-bottom;
+}
+
 
 @mixin transition {
     transition: all .4s ease-in-out;
