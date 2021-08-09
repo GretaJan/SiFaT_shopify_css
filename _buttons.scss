@@ -55,7 +55,7 @@
     }
 }
 
-.btn-outline-dark, .secondary-btn {
+.btn-outline-dark, [class*="button--secondary"] {
     border: 2px solid $darkBlue !important;
     color: $darkBlue !important;
 
@@ -105,3 +105,11 @@
 
 // }
 
+
+@media #{$mobile} {
+    footer {
+        .button-primary {
+            margin-top: 0 !important;
+        }
+    }
+}

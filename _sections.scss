@@ -60,14 +60,14 @@
 
 .darkblue-element-bottom, .darkblue-element-top {
 	&::after {
-		background-image: url('lightblue-element.png');
+		background-image: url('darkblue-element.png');
 	}
 }
 
 .lightblue-element-bottom, .light-element-top {
 	background-color: $lightBlue !important;
 	&::after {
-		background-image: url('darkblue-element.png');
+		background-image: url('lightblue-element.png');
 	}
 }
 
