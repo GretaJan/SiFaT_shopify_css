@@ -2,7 +2,7 @@
     width: auto;
 }
 
-.newsletter-submit button, .slideshow-slide__button, .button-primary, .btn-outline-dark {
+.newsletter-submit button, .slideshow-slide__button, .button-primary, .btn-outline-dark, .product-form--atc-button {
     background-color: transparent !important;
     font-weight: 700 !important;
     display: flex;
@@ -40,22 +40,55 @@
     }
 }
 
-.newsletter-submit button, .slideshow-slide__button, .button-primary {
+html body {
+    .newsletter-submit button, .slideshow-slide__button, .button-primary {
+        border: 2px solid $lightBlue;
+        color: $whiteColor;
+    
+        &::after {
+            background-image: url('arrows-lightblue.png');
+        }
+    
+        &:hover {
+            border: 2px solid $whiteColor !important;
+            background-color: $whiteColor !important;
+            color: $lightBlue !important;
+        }
+    }
+}
+
+.product-form--atc-button {
     border: 2px solid $lightBlue;
-    color: $whiteColor;
+    color: $darkBlue !important;
+    display: flex;
+    align-items: center;
+
+    span {
+        color: $darkBlue !important;
+    }
 
     &::after {
         background-image: url('arrows-lightblue.png');
     }
 
     &:hover {
-        border: 2px solid $whiteColor !important;
-        background-color: $whiteColor !important;
-        color: $lightBlue !important;
+        border: 2px solid $lightBlue !important;
+        background-color: $lightBlue !important;
+        color: $whiteColor !important;
+
+        span {
+            color: $whiteColor !important;
+        }
+
+        &::after {
+            background-image: url('arrows-white.png');
+        }
     }
 }
 
-.btn-outline-dark, [class*="button--secondary"] {
+
+
+.btn-outline-dark, [class*="button--secondary"], .shopify-payment-button__button {
     border: 2px solid $darkBlue !important;
     color: $darkBlue !important;
 
@@ -67,6 +100,7 @@
         border: 2px solid $lightBlue !important;
         background-color: $lightBlue !important;
         color: $whiteColor!important;
+
 
         &::after {
             background-image: url('arrows-white.png');

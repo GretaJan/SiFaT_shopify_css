@@ -60,8 +60,9 @@
     svg {
         display: none !important;
     }
-    
 }
+
+
 /************************************************/
 .full-width-slide-carousel {
     .data-slide-content {
@@ -129,29 +130,18 @@
 
     }
 
-    .flickity-button {
-        &.previous {
-            background-image: url(arrow-left.png) !important;
-            // left: 2vw !important;
-        }
+    // .flickity-button {
+    //     &.previous {
+    //         background-image: url(arrow-left.png) !important;
+    //         // left: 2vw !important;
+    //     }
     
-        &.next {
-            background-image: url(arrow-right.png) !important;
-            // right: 2vw !important;
-        }
-    }
-
-    // .testimonial.blue  {
-    //     background-image: url(small-blue-background-quality.jpg);
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
+    //     &.next {
+    //         background-image: url(arrow-right.png) !important;
+    //         // right: 2vw !important;
+    //     }
     // }
 
-}
-
-.slideshow-pagination {
-    display: none !important;
 }
 
 .flickity-button {
@@ -168,6 +158,33 @@
         display: none;
     }
 
+}
+
+.products-slider, .products-carousel {
+    .flickity-button {
+        &.previous {
+            background-image: url(arrow-left.png) !important;
+            // left: 2vw !important;
+        }
+    
+        &.next {
+            background-image: url(arrow-right.png) !important;
+            // right: 2vw !important;
+        }
+    }
+}
+
+.products-slider {
+    &.previous, &.next {
+        animation: none !important;
+    }
+    &.previous {
+        left: 0 !important;
+    }
+
+    &.next {
+        right: 0 !important;
+    }
 }
 
 /********************* slide types *************/ 

@@ -73,6 +73,7 @@ $fonts: (
     "h2" : 5rem, 
 	"h3" : 3.6rem, 
     "h4" : 3.2rem, 
+    "label": 3.2rem, 
 /*     "h4" : 2rem, */
 /*     "h5" : 2rem, */
     "h6" : 2.3rem,
@@ -103,8 +104,8 @@ $mobileFonts: (
             font-size: $value !important;
         }
     }
-    
 }
+
 
 h1, h2, h3, h4, h5, h6 {
     font-style: italic !important;
@@ -112,8 +113,56 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2em;
 }
 
+h1 {
+    line-height: 1em !important;
+}
+
+h4 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 h1, h2, h3, h4, h5, h6, p, a {
     font-family: "Kanit" !important;
+}
+
+.product--section {
+
+    .product-gallery {
+        .product-gallery--expand {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    .product--container {
+        a {
+            color: $lightBlue !important;
+        }
+    }
+    .product-vendor {
+        font-weight: 400 !important;
+    }
+
+    .product-title {
+        font-weight: 400 !important;
+    }
+
+    .product__price  {
+        span {
+            color: $lightBlue !important;
+            font-size: 3.2rem;
+        }
+    }
+    .product-form--regular {
+        // .form-field-title {
+
+        // }
+    }
+
+    .variants-ui__option-name {
+        font-style: italic;
+        font-weight: 400 !important;
+    }
 }
 
 h2 {
@@ -288,6 +337,11 @@ header {
         a {
             color: $lightBlue !important;
         }
+    }
+}
+form {
+    label, input, p, h1, h2, h3, h4, h5 {
+        color: $black !important;
     }
 }
   

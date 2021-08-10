@@ -21,6 +21,18 @@
             margin-right: 0;
             margin-left: 0;
         }
+
+    }
+}
+
+
+form {
+    
+    .form-field-title {
+        top: 0 !important;
+        left: 0 !important;
+        position: relative;
+        width: 100% !important;
     }
 }
 
@@ -33,6 +45,10 @@ input {
     border-radius: 0 !important;
 }
 
+
 input:not(header input) {
     height: 60px !important;
 }
+
+
+

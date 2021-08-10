@@ -1,0 +1,226 @@
+//****  Product single ****/
+
+.product--section {
+
+    .product-title {
+        font-size: 5rem !important;
+    }
+    .product--outer {
+        @include verticalWrap-tiny-top;
+        @include verticalWrap-intermediate-bottom;
+
+       .product-main-content-wrap {
+
+        .product-gallery {
+            width: 100% !important;
+            .product-gallery--has-media {
+                @include halfSideWrap;
+
+                .product-gallery--image-background > img {
+                    height: 480px;
+                    width: 100;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+        }
+
+        .product-main {
+            margin-left: 0 !important;
+            top: 50px;
+               
+            .product-vendor {
+                margin-bottom: 0 !important;
+            }
+
+            .form-fields--qty {
+                width: auto !important;
+            }
+
+            .product-pricing {
+                @include verticalWrap-smallmedium;
+            }
+
+            .variants-ui__option-values {
+                @include marginTopNone;
+            }
+
+            .variants-ui__option-name {
+                @include marginTopBottomNone;
+            }
+
+            .product-form--atc {
+
+
+                .formfield-with-label-wrapper {
+                    display: flex;
+                    vertical-align: center;
+                }
+
+                .quantity-select-wrapper {
+                    height: 60px;
+                    display: flex;
+                    flex-grow: 1;
+                    margin-right: 25px;
+                    position: relative;
+
+
+                    & > * {
+                        border-top: 1px solid $black !important;
+                        border-bottom: 1px solid $black !important;
+                    } 
+
+                   
+                    .product-quantity-select {
+                        width: 58px !important;
+                        max-width: 58px !important;
+                        border-left: 1px solid $black !important;
+                        border-top-left-radius: 3px !important;
+                        border-bottom-left-radius: 3px !important;
+                        border-right: none !important;
+                        @include fitContentWidth;
+                        cursor: auto !important;
+                        justify-content: center;
+                        display: flex;
+                        text-align: center;
+                    }
+                    .quantity-selector {
+                        width: 58px;
+                        height: 100%;
+                        padding: 2px;
+                        border-right: 1px solid $black;
+                        border-left: 1px solid $black;
+                        border-top-right-radius: 3px;
+                        border-bottom-right-radius: 3px;
+                    }
+                }
+
+                .product-quantity-select {
+                    position: relative;
+
+                }
+                .upgrade, .downgrade {
+                    width: 100%;
+                    height: 50%;
+                    position: relative;
+                    cursor: pointer;
+
+                    &::after {
+                        content: '';
+                        background-image: url(arrow-left.png);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        display: block;
+                        position: absolute;
+                        width: 15.8px;
+                        height: 14px;
+                        left: calc(50% - 7.4px);
+                    }
+                }
+
+                // .product-form--alt {
+                //     width: 100% !important;
+                //     margin-left: 0 !important
+                // }
+
+                .upgrade {
+                    &::after {
+                        transform: rotate(90deg);
+                        background-position: center top;
+                        top: 4px;
+                    }
+                }
+
+                .downgrade {
+                    &::after {
+                        transform: rotate(-90deg);
+                        background-position: center bottom;
+                        bottom: 4px;
+                    }
+                }
+            }
+        }
+       }
+        
+    }
+}
+
+@media #{$tablet} {
+    .product--section {
+        .product--outer {
+           .product-main-content-wrap {
+            display: flex;
+            gap: 120px;
+            & > * {
+                flex: 1 1 100%;
+            }
+           }
+            
+        }
+    }
+    
+}
+
+
+
+// <div class="product-form--atc">
+//     <div class="product-form--atc-qty form-fields--qty" data-quantity-wrapper>
+//         <div class="form-field form-field--qty-select">
+//             <div class="formfield-with-label-wrapper">
+//                 <div class="form-field-select-wrapper quantity-select-wrapper">
+//                     <input
+//                     id="product-quantity-select"
+//                     class="form-field-input form-field-select"
+//                     aria-label="{{ 'general.general.quantity' | t }}"
+//                     data-quantity-select
+//                     value="1"
+//                     >
+//                     <div class="quantity-selector">
+//                         <span class="upgrade"></span><span class="downgrade></span>
+//                     </div>
+//                     <div class="form-field form-field--qty-input hidden">
+//                     <input
+//                       id="product-quantity-input"
+//                       class="form-field-input form-field-number form-field-filled"
+//                       value="1"
+//                       name="quantity"
+//                       type="text"
+//                       pattern="\d*"
+//                       aria-label="{{ 'general.general.quantity' | t }}"
+//                       data-quantity-input
+//                     >
+//                     <label
+//                       for="product-quantity-input"
+//                       class="form-field-title"
+//                     >
+//                       {{ 'general.general.quantity' | t }}
+//                     </label>
+//                   </div>
+//                 </div>
+//                 <label
+//                     for="product-quantity-select"
+//                         class="form-field-title"
+//                         >
+//                     {{ 'general.general.quantity' | t }}
+//                 </label> 
+//             </div> 
+//         </div>
+//     </div>
+//     <button
+//         class="product-form--atc-button {% if selected_variant and selected_variant.available == false %}disabled{% endif %}"
+//         type="submit"
+//         {% if selected_variant and selected_variant.available == false %}disabled{% endif %}
+//         data-product-atc
+//         >
+//         <span class="atc-button--text">
+//             {% unless selected_variant and selected_variant.available == false %}
+//             {{ 'product.buttons.add_to_cart' | t }}
+//             {% else %}
+//             {{ 'product.buttons.sold_out' | t }}
+//             {% endunless %}
+//         </span>
+//         <span class="atc-button--icon">
+//             {%- render 'icon-spinner' -%}
+//         </span>
+//     </button>
+// </div>
