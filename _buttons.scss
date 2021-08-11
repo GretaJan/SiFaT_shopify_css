@@ -2,20 +2,18 @@
     width: auto;
 }
 
-.newsletter-submit button, .slideshow-slide__button, .button-primary, .btn-outline-dark, .product-form--atc-button {
-    background-color: transparent !important;
-    font-weight: 700 !important;
+// .newsletter-submit button, .slideshow-slide__button, .button-primary, .btn-outline-dark, .product-form--atc-button {
+.button {   
+    background-color: transparent;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: .3em 1em !important;
+    padding: .3em 1em;
     @include transition;
-    margin-top: 30px !important;
+    margin-top: 30px;
     @include fitContentWidth;
     border-radius: 3px;
-    &::before {
-        display: none !important;
-    }
 
     &::after {
         content: '';
@@ -23,14 +21,49 @@
         background-repeat: no-repeat;
         background-size: contain;
         display: inline-block;
-/*         margin-left: 9px;
+        background-color: transparent ;
+    }
+
+    &:not(.small)::after {
+        margin-left: 15px;
+        margin-top: 5px;
+        height: 18px;
+        width: 20px;
+    }
+
+}
+
+.button.small {
+    &::after {
+        margin-left: 12px;
         height: 14px;
-        width: 18px; */
-          margin-left: 15px;
-          margin-top: 5px;
-         height: 18px;
-          width: 20px;
-        background-color: transparent !important;
+        width: 16px;
+    }
+}
+
+// html body {
+//     .outline-light-white-txt, .slideshow-slide__button, .button-primary {
+//         border: 2px solid $lightBlue;
+//         color: $whiteColor;
+    
+//         &::after {
+//             background-image: url('arrows-lightblue.png');
+//         }
+    
+//         &:hover {
+//             border: 2px solid $whiteColor !important;
+//             background-color: $whiteColor !important;
+//             color: $lightBlue !important;
+//         }
+//     }
+// }
+
+.button--primary {
+    border: 2px solid $lightBlue;
+    color: $whiteColor;
+
+    &::after {
+        background-image: url('arrows-lightblue.png');
     }
 
     &:hover {
@@ -40,24 +73,22 @@
     }
 }
 
-html body {
-    .newsletter-submit button, .slideshow-slide__button, .button-primary {
-        border: 2px solid $lightBlue;
-        color: $whiteColor;
-    
-        &::after {
-            background-image: url('arrows-lightblue.png');
-        }
-    
-        &:hover {
-            border: 2px solid $whiteColor !important;
-            background-color: $whiteColor !important;
-            color: $lightBlue !important;
-        }
-    }
-}
+// .button--secondary {
+//     border: 2px solid $lightBlue;
+//     color: $whiteColor;
 
-.product-form--atc-button {
+//     &::after {
+//         background-image: url('arrows-lightblue.png');
+//     }
+
+//     &:hover {
+//         border: 2px solid $whiteColor !important;
+//         background-color: $whiteColor !important;
+//         color: $lightBlue !important;
+//     }
+// }
+
+.product-form--atc-button, .button--tertiary {
     border: 2px solid $lightBlue;
     color: $darkBlue !important;
     display: flex;
@@ -88,7 +119,7 @@ html body {
 
 
 
-.btn-outline-dark, [class*="button--secondary"], .shopify-payment-button__button {
+.button--secondary, .shopify-payment-button__button {
     border: 2px solid $darkBlue !important;
     color: $darkBlue !important;
 
@@ -97,8 +128,7 @@ html body {
     }
 
     &:hover {
-        border: 2px solid $lightBlue !important;
-        background-color: $lightBlue !important;
+        background-color: $darkBlue !important;
         color: $whiteColor!important;
 
 
@@ -140,10 +170,11 @@ html body {
 // }
 
 
-@media #{$mobile} {
-    footer {
-        .button-primary {
-            margin-top: 0 !important;
-        }
-    }
-}
+// @media #{$tabletMax} {
+//     footer {
+//         .button--primary {
+//             margin-top: 0 !important;
+//         }
+//     }
+// }
+

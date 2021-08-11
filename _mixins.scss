@@ -1,21 +1,22 @@
 
 
 @mixin sideWrap {
-    padding-left: 4vw !important; 
-    padding-right: 4vw !important;  
+    padding-left: 4vw; 
+    padding-right: 4vw;  
 
     @media #{$desktop} {
-        padding-left: 2vw !important; 
-        padding-right: 2vw !important; 
-        max-width: 1408px !important; 
-        margin-left: auto !important; 
-        margin-right: auto !important; 
+        padding-left: 2vw; 
+        padding-right: 2vw; 
+        max-width: 1408px; 
+        width: 100%;
+        margin-left: auto; 
+        margin-right: auto; 
     }
  
 
     @media #{$fullhd} {
-        padding-left: .5vw !important; 
-        padding-right: .5vw !important; 
+        padding-left: .5vw; 
+        padding-right: .5vw; 
     }
 }
 
@@ -130,10 +131,33 @@
     @include verticalWrap-large-bottom;
 }
 
-@mixin verticalWrap-larger {
-    @include verticalWrap-top;
-    @include verticalWrap-bottom;
+@mixin verticalWrap-medium-large-top {
+    padding-top: 4rem!important; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important; 
+    @media #{$desktop} {
+        padding-top: 9rem!important;  
+    }
 }
+
+@mixin verticalWrap-medium-large-bottom {
+    padding-bottom: 4rem!important; 
+    margin-top: 0 !important;
+	margin-bottom: 0 !important; 
+    @media #{$desktop} {
+        padding-bottom: 9rem!important; 
+    }
+}
+
+@mixin verticalWrap-medium-large {
+    @include verticalWrap-medium-large-top;
+    @include verticalWrap-medium-large-bottom;
+}
+
+// @mixin verticalWrap-larger {
+//     @include verticalWrap-top;
+//     @include verticalWrap-bottom;
+// }
 
 @mixin verticalWrap-xlarge-top {
     padding-top: 7rem!important; 
@@ -154,8 +178,8 @@
 }
 
 @mixin verticalWrap-xlarge {
-    @include verticalWrap-top;
-    @include verticalWrap-bottom;
+    @include verticalWrap-xlarge-top;
+    @include verticalWrap-xlarge-bottom;
 }
 
 @mixin verticalWrap-intermediate-top {

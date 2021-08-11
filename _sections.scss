@@ -31,6 +31,21 @@
 // 	@include sideWrap;
 // }
 
+.section-title {
+	&:not(.small-title) {
+		padding-bottom: 5rem;
+	}
+	h2 {
+		padding: 0;
+		margin: 0;
+	}
+
+	
+    &.small-title {
+        margin-bottom: 15px;
+    }
+}
+
 
 .lightblue-element-bottom, .darkblue-element-bottom  {
 	position: relative;
@@ -111,4 +126,12 @@ iframe {
 		}
 	}
 
+}
+
+.modal__content {
+	background-color: rgba(0, 20, 65, .4);
+
+	svg {
+		color: $lightBlue;
+	}
 }

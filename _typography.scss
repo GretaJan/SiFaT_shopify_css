@@ -75,7 +75,7 @@ $fonts: (
     "h4" : 3.2rem, 
     "label": 3.2rem, 
 /*     "h4" : 2rem, */
-/*     "h5" : 2rem, */
+    "h5" : 2.6rem, 
     "h6" : 2.3rem,
     "p": 2.6rem, 
 /*     "li": 1.5rem,  */
@@ -84,7 +84,7 @@ $fonts: (
 
 
 $mobileFonts: (
-    "h1" : 7rem,
+    "h1" : 5rem,
     "h2" : 4rem, 
 	"h3" : 3rem, 
     "h4" : 2.5rem, 
@@ -94,36 +94,66 @@ $mobileFonts: (
 
 @each $name, $value in $fonts {
     #{$name} {
-        font-size: $value !important;
+        font-size: $value;
     }
 }
 
 @media #{$mobile} {
     @each $name, $value in $mobileFonts {
         #{$name} {
-            font-size: $value !important;
+            font-size: $value;
+        }
+    }
+
+    html .section-title {
+    
+        &.large-title h2 {
+            font-size: 5rem;
         }
     }
 }
 
+ul {
+    text-decoration: none !important;
+}
 
-h1, h2, h3, h4, h5, h6 {
-    font-style: italic !important;
-    font-weight: 700 !important;
+// h1, h2, h3, h4, h5, h6, p {
+//     padding-bottom: 1.4em;
+// }
+h1, h2, h3, h4, h6 {
+    font-style: italic;
+    font-weight: 700;
+
+}
+h5 {
+    font-style: italic;
+    font-weight: 500;
+}
+h2, h3, h4, h5, h6, p, a {
     line-height: 1.2em;
 }
 
+
+
+a {
+    line-height: 1.3em;
+}
+
 h1 {
-    line-height: 1em !important;
+    line-height: 1em;
 }
 
 h4 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
     font-family: "Kanit" !important;
+}
+
+ul {
+    list-style: none;
 }
 
 .product--section {
@@ -136,7 +166,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
     .product--container {
         a {
-            color: $lightBlue !important;
+            color: $lightBlue;
         }
     }
     .product-vendor {
@@ -153,11 +183,6 @@ h1, h2, h3, h4, h5, h6, p, a {
             font-size: 3.2rem;
         }
     }
-    .product-form--regular {
-        // .form-field-title {
-
-        // }
-    }
 
     .variants-ui__option-name {
         font-style: italic;
@@ -171,19 +196,21 @@ h2 {
 }
 
 div p:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: .5em;
 }
 
 html body a {
     text-decoration: none !important;
 }
 
-.announcement-bar-text {
-    a {
+.announcement-bar {
+    h1, h2, h3, h4, h5, p, a, span {
         font-size: 1.6rem !important;
         font-weight: 700;
+        color: $whiteColor;
     }
 }
+
 
 .textAlignLeft {
     h1, h2, h3, h4, h5, p {
@@ -227,14 +254,23 @@ section.slideshow {
     }
 }
 
+.shopify-section-announcement-bar {
+    h1, h2, h3, h4, h5, h6, p, a {
+        color: $whiteColor;
+    }
+}
+
 header {
-    
-    .navmenu-depth-1 {
-        li {
-            a {
+    .list-menu {
+        & > li {
+            a, span {
                 font-size: 2.2rem !important;
                 color: $whiteColor !important;
                 font-weight: 400 !important;
+            }
+
+            svg path {
+                fill: $whiteColor;
             }
         }
     }
@@ -263,31 +299,31 @@ header {
     }
 }
 
-.promo-grid--section {
-	.promo-grid__columns--4 {
-		h2, p, h4 {
-			color: $whiteColor !important;
-		}
-    }
+// .promo-grid--section {
+// 	.grid-cols--4 {
+// 		h2, p, h4 {
+// 			color: $whiteColor !important;
+// 		}
+//     }
 
-    .img-top {
-        p, a, h1, h2, h3, h4, h5, h4, span {
-            color: $black !important;
-        }
-        .button-primary {
+//     .img-top {
+//         p, a, h1, h2, h3, h4, h5, h4, span {
+//             color: $black !important;
+//         }
+//         // .button-primary {
             
-            &:hover {
-                color: $lightBlue !important;
-            }
-		}
-    }
-}
+//         //     &:hover {
+//         //         color: $lightBlue !important;
+//         //     }
+// 		// }
+//     }
+// }
 
 @media (max-width: 1550px) {
     header {
-        .navmenu-depth-1 {
-            li {
-                a {
+        .list-menu {
+            & > li {
+                a, span {
                     font-size: 2rem !important;
                 }
             }
@@ -295,15 +331,87 @@ header {
     }
 } 
   
- html body .btn, button, .button-primary:not(footer > .button-primary) {
+.button:not(.small) {
    font-size: 3.3rem !important;
    font-style: italic !important;
- }
+}
 
- footer > .button-primary {
+
+.button.small {
     font-size: 2.2rem !important;
     font-style: italic !important;
  }
+
+.white-txt {
+    color: $whiteColor !important;
+
+    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    color: $whiteColor!important;
+    }
+
+}
+
+
+.black-txt {
+    color: $black !important;
+
+    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    color: $black !important;
+    }
+
+}
+
+
+.darkblue-txt {
+    color: $darkBlue !important;
+
+    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    color: $darkBlue !important;
+    }
+
+}
+
+.lightblue-txt {
+    color: $lightBlue !important;
+
+    p, h1, h2, h3, h4, h5, h4, span, a {
+        color: $lightBlue !important;
+    }
+
+}
+
+.red-txt {
+    color: $red !important;
+
+    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    color: $red !important;
+    }
+
+}
+
+.section-title {
+    &:not(.large-title) h2 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    &.large-title h2 {
+        font-size: 8rem;
+        line-height: 1em;
+    }
+
+    .small-title {
+        h3 {
+            line-height: 1.1em;
+        }
+    }
+}
+
+.footer__content-bottom {
+    small, a {
+        color: $whiteColor;
+    }
+}
 
  .products-carousel {
     h6 a {
@@ -339,6 +447,32 @@ header {
         }
     }
 }
+
+
+.subheading {
+    .lightblue-txt {
+        color: $lightBlue !important
+    }
+}
+
+.subheading {
+    .blue-txt {
+        color: $darkBlue !important
+    }
+}
+
+.subheading {
+    .black-txt {
+        color: $black !important
+    }
+}
+
+.subheading {
+    .white-txt {
+        color: $whiteColor !important
+    }
+}
+
 form {
     label, input, p, h1, h2, h3, h4, h5 {
         color: $black !important;
@@ -351,7 +485,7 @@ html body footer {
   }
 
   h1, h2, h3, h4, h5, h6, p, li, a {
-      color: $whiteColor !important;
+      color: $whiteColor;
   }
 
   a:hover {
@@ -370,4 +504,15 @@ html body footer {
         }
     }
  
+}
+
+@media #{$tablet} {
+    .full-img {
+		.collection-item-inner-wrapper {
+
+            h2, h3 {
+                font-size: 4.5rem;
+            }
+        }
+    }
 }

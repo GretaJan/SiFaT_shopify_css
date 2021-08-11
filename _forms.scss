@@ -1,10 +1,10 @@
 
-.newsletter {
+.footer-block__newsletter {
     form {
-
-        .form-field-title {
-            display: none !important;
-        }
+        display: block;
+        // .form-field-title {
+        //     display: none !important;
+        // }
 
         .form-fields-inline {
             display: block !important;
@@ -14,14 +14,18 @@
             margin-top: 35px !important;
             margin-bottom: 35px !important;
         }
-        .newsletter-input {
+
+        .field > input {
             width: 100%!important;
             max-width: 300px!important;
-            margin-top: 0;
-            margin-right: 0;
-            margin-left: 0;
         }
-
+        // .newsletter-input {
+        //     width: 100%!important;
+        //     max-width: 300px!important;
+        //     margin-top: 0;
+        //     margin-right: 0;
+        //     margin-left: 0;
+        // }
     }
 }
 
@@ -34,21 +38,37 @@ form {
         position: relative;
         width: 100% !important;
     }
+
 }
 
 input {
     color: $darkBlue !important;
     font-size: 2.2rem !important;
-    padding: .3em .5em !important;
-    background-color: $whiteColor;
+    padding: .5em .5em !important;
+    background-color: $whiteColor !important;
     border: 0 !important;
     border-radius: 0 !important;
 }
 
 
-input:not(header input) {
+input {
     height: 60px !important;
 }
 
+form.search {
+    display: flex;
+    align-items: center;
+    button {
+        width: 58px;
+        height: 100%;
+        border-left: 1px solid $black;
+    }
+}
+
+.icon-search {
+    color: $lightBlue;
+    height: 24px;
+    width: 24px;
+}
 
 

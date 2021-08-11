@@ -9,10 +9,6 @@
     }
 }
 
-.has-block-below {
-	padding-bottom: 30px;
-}
-
 
 .slideshow--width-full {
 
@@ -280,6 +276,18 @@ section.slideshow {
 
 /********************* end slide types *************/ 
 
+@media #{$tabletMax} and (min-width: 768px) {
+    .has-block-below {
+        padding-bottom: 30px;
+    }
+    
+    .fit-content-container {
+        .has-block-below {
+            padding-bottom: 70px;
+        }
+    }
+}
+
 @media #{$tablet} {
 
     .products-carousel {
@@ -337,8 +345,9 @@ section.slideshow {
         }
     }
 
+
     .has-block-below {
-        padding-bottom: 70px;
+        padding-bottom: 140px;
     }
 
 }

@@ -1,0 +1,34 @@
+
+.banner {
+    min-height: 0;
+
+    .banner-inner-wrap {
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    // .banner__content {
+    //     height: 100%;
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+
+    .banner__box {
+        @include fitContentHeight;
+        width: 100%;
+    }
+
+    .banner__media {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .banner__content {
+        z-index: 1;
+    }
+
+}
+
