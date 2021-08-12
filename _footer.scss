@@ -129,6 +129,7 @@ footer {
             .footer__blocks-wrapper {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-between;
 
                 .footer-block {
                     width: 20%;
