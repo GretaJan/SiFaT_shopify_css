@@ -82,10 +82,6 @@
 @mixin verticalWrap-bottom {
     padding-top: 20px;
 }
-@mixin verticalWrap-smallmedium {
-    @include verticalWrap-smallmedium-bottom; 
-    @include verticalWrap-smallmedium-top; 
-}
 
  
  @mixin verticalWrap-smallmedium-top {
@@ -106,6 +102,10 @@
      }
  }
 
+ @mixin verticalWrap-smallmedium {
+    @include verticalWrap-smallmedium-bottom; 
+    @include verticalWrap-smallmedium-top; 
+}
 
 /////////
 

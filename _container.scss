@@ -186,7 +186,7 @@ body {
 }
 
 // .grid-cols--2, .grid-cols--3, .grid-cols--4, .grid-cols--5, .grid-cols--multiple {
-[class*="grid-cols-"] {
+[class*="grid-cols-"], [class*="grid-row-cols"] {
 	display: grid;
 	display: -ms-grid;
 	display: -moz-grid;
@@ -196,6 +196,30 @@ body {
 	display: -moz-inline-grid;
 }
 
+
+.arrow-decoration-list {
+	li {
+		font-size: 2.6rem;
+		line-height: 1.1em;
+		font-weight: 700;
+		position: relative;
+		margin-bottom: 35px;
+
+		&::before {
+			content: "";
+			background-image: url(arrows-lightblue.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			display: inline-block;
+			left: -20px;
+			height: 15px;
+			width: 15px;
+			position: absolute;
+			top: 9px;
+		}
+	}	
+}
 
 .grid-cols--5 {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
