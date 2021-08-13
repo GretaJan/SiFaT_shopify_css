@@ -89,6 +89,11 @@
     grid-auto-flow: column;
 }
 
+.carousel-small-grid-cols--3 {
+    grid-auto-columns: 33.3%;
+    grid-auto-flow: column;
+}
+
 @media #{$tablet} {
     .carousel-grid-cols--2 {
         grid-auto-columns: 50%;
