@@ -35,22 +35,29 @@
 
         .slide-inner-wrap {
             height: 100%;
-        }
-
-        .media-block {
-            width: 100%;
-            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             @include sideWrap;
+        }
 
+        .media-block {
+            height: 100%;
+            width: 100%;
+            max-width: 800px;
+            max-height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            
             & > * {
-                height: 100%;
-                width: 100%;
-                max-width: 800px;
-                max-height: 800px;
-                object-fit: none;
+
+                // height: 100%;
+                // width: 100%;
+                // max-width: 800px;
+                // max-height: 800px;
+                
             }
         }
     }

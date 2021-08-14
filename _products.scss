@@ -78,7 +78,7 @@
             // }
 
             .price {
-                @include verticalWrap-smallmedium;
+                @include verticalWrap-smallmedium-bottom;
             }
 
             // .variants-ui__option-values {
@@ -90,6 +90,9 @@
             // }
 
             .product-price-form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
                 h4 {
                     @include fitContentHeight;
@@ -172,11 +175,47 @@
                         bottom: 4px;
                     }
                 }
+
+                .vendor-logo {
+                    margin-top: 30px;
+                    img {
+                        height: 100px;
+                        width: auto;
+                        object-fit: contain;
+                    }
+                }
             }
         }
 }
 
+//****  Collections page ****/
+
+.collection-filters {
+
+
+    .facets__form {
+   
+        .facets__display {
+            background-color: $whiteColor;
+        }
+
+        .facets__summary {
+            &::marker, & > div {
+                display: inline;
+            }
+        }
+    }
+
+    .mobile-facets__wrapper {
+        .disclosure-has-popup {
+            display: none;
+        }
+    }
+}
+
 @media #{$mobile} {
+
+    //****  Product single ****/
     .product-section {
         .bottom-carousel {
             display: none;
@@ -185,6 +224,8 @@
 }
 
 @media #{$wide} {
+
+    //****  Product single ****/
     .product-section {
         .product-outer {
 
@@ -193,8 +234,24 @@
                 grid-template-columns: .55fr .45fr;
                 grid-column-gap: 130px;
                 grid-template-areas:
-                    'gallery title'
-                    'gallery price-form'
+                    // 'gallery title'
+                    // 'gallery price-form'
+                    // 'description specifics';
+                    'gallery title' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
+                    'gallery price-form' 
                     'description specifics';
             }
     
@@ -204,66 +261,3 @@
     
 }
 
-
-
-// <div class="product-form--atc">
-//     <div class="product-form--atc-qty form-fields--qty" data-quantity-wrapper>
-//         <div class="form-field form-field--qty-select">
-//             <div class="formfield-with-label-wrapper">
-//                 <div class="form-field-select-wrapper quantity-select-wrapper">
-//                     <input
-//                     id="product-quantity-select"
-//                     class="form-field-input form-field-select"
-//                     aria-label="{{ 'general.general.quantity' | t }}"
-//                     data-quantity-select
-//                     value="1"
-//                     >
-//                     <div class="quantity-selector">
-//                         <span class="upgrade"></span><span class="downgrade></span>
-//                     </div>
-//                     <div class="form-field form-field--qty-input hidden">
-//                     <input
-//                       id="product-quantity-input"
-//                       class="form-field-input form-field-number form-field-filled"
-//                       value="1"
-//                       name="quantity"
-//                       type="text"
-//                       pattern="\d*"
-//                       aria-label="{{ 'general.general.quantity' | t }}"
-//                       data-quantity-input
-//                     >
-//                     <label
-//                       for="product-quantity-input"
-//                       class="form-field-title"
-//                     >
-//                       {{ 'general.general.quantity' | t }}
-//                     </label>
-//                   </div>
-//                 </div>
-//                 <label
-//                     for="product-quantity-select"
-//                         class="form-field-title"
-//                         >
-//                     {{ 'general.general.quantity' | t }}
-//                 </label> 
-//             </div> 
-//         </div>
-//     </div>
-//     <button
-//         class="product-form--atc-button {% if selected_variant and selected_variant.available == false %}disabled{% endif %}"
-//         type="submit"
-//         {% if selected_variant and selected_variant.available == false %}disabled{% endif %}
-//         data-product-atc
-//         >
-//         <span class="atc-button--text">
-//             {% unless selected_variant and selected_variant.available == false %}
-//             {{ 'product.buttons.add_to_cart' | t }}
-//             {% else %}
-//             {{ 'product.buttons.sold_out' | t }}
-//             {% endunless %}
-//         </span>
-//         <span class="atc-button--icon">
-//             {%- render 'icon-spinner' -%}
-//         </span>
-//     </button>
-// </div>

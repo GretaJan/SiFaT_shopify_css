@@ -46,18 +46,12 @@ body {
 	@include verticalWrap;
 }
 
-.m-v_gap {
-	@include verticalWrap;
-}
 
 //medium top
 .m-t-v_gap {
 	@include verticalWrap;
 }
 
-.m-t-v_gap {
-	@include verticalWrap-top;
-}
 
 //medium bt
 .m-bt-v_gap {
@@ -87,10 +81,6 @@ body {
 }
 
 //large bt
-.l-bt-v_gap {
-	@include verticalWrap-large-bottom;
-}
-
 .l-bt-v_gap {
 	@include verticalWrap-large-bottom;
 }
@@ -663,7 +653,7 @@ body {
 }
 
 
-.blue-background  {
+.darkblue-background  {
 	background-image: url(small-blue-background-quality.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -762,6 +752,34 @@ body {
 .visually-hidden {
 	display: none;
 }
+
+.item-text-below {
+
+	.item-inner-wrap {
+		padding: 30px;
+	}
+	
+	.image-block {
+		height: 220px;
+		width: 100%;
+		margin-bottom: 20px;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+}
+
+[class="grid-col"] {
+	&:hover .image-block {
+		transform: scale(1.1);
+		@include transition;
+	}
+}
+
+
 
 @media #{$desktop} {
 

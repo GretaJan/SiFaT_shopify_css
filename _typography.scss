@@ -106,7 +106,10 @@ $mobileFonts: (
     }
 
     html .section-title {
-    
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+        }
         &.large-title h2 {
             font-size: 4.5rem;
         }
@@ -125,9 +128,11 @@ h1, h2, h3, h4, h6 {
     font-weight: 700;
 }
 
-h4 span {
-    font-weight: 300;
-}
+h4, h1, h2, h3, h4, h5, h6 {
+    span {
+        font-weight: 300;
+    }
+} 
 h5 {
     font-style: italic;
     font-weight: 500;
@@ -344,7 +349,7 @@ header {
     }
 } 
   
-.button:not(.small) {
+.button:not(.small), .shopify-payment-button__button {
    font-size: 3.3rem !important;
    font-style: italic !important;
 }
@@ -410,9 +415,11 @@ header {
 }
 
 .section-title {
+    h1 {
+        font-size: 5rem;
+    }
     &:not(.large-title):not(.product-title) h2 {
         font-size: 5rem;
-        text-align: center;
     }
 
     &.large-title h2 {

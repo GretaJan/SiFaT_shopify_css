@@ -7,14 +7,15 @@
 // }
 #shopify-section-announcement-bar {
   background-color: $lightBlue;
-  
-  .announcement-bar {
+
+  .announcement-bar-inner {
     @include sideWrap;
     @include verticalWrap-tiny;
+    display: flex;
+    justify-content: flex-end;
+  }
 
-    .announcement-bar__message {
-      text-align: right;
-    }
+  .announcement-bar {
 
     & > *:not(:last-child) {
       margin-right: 18px;
