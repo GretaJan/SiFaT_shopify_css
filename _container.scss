@@ -112,6 +112,10 @@ body {
 	@include verticalWrap-xlarge-bottom;
 }
 
+.image-overlay {
+	background: $overlayBlack !important;
+}
+
 .image-position-center {
 	background-position: center;
     img {
@@ -753,9 +757,13 @@ body {
 	display: none;
 }
 
-.item-text-below {
+.image-block {
+	overflow: hidden;
+}
 
-	.item-inner-wrap {
+.item-text-below, .carousel-text-below {
+
+	a {
 		padding: 30px;
 	}
 	
@@ -772,10 +780,24 @@ body {
 
 }
 
-[class="grid-col"] {
-	&:hover .image-block {
-		transform: scale(1.1);
-		@include transition;
+.grid-section-item, .article-item, .swiper-slide.carousel-text-below {
+	overflow: hidden;
+
+	a {
+		.image-block, .article-image-block {
+			@include transition;
+		}
+	}
+
+	&:hover {
+
+		a {
+			.image-block, .article-image-block {
+				transform: scale(1.1);
+				@include transition;
+			}
+		}
+
 	}
 }
 

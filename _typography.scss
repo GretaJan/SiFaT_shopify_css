@@ -225,7 +225,7 @@ html body a {
     }
 }
 
-a:not(li a):not(.button) {
+a:not(li a):not(.button), .social-sharing a {
     color: $lightBlue !important;
 }
 
