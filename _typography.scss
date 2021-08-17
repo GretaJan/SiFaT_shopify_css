@@ -114,6 +114,14 @@ $mobileFonts: (
             font-size: 4.5rem;
         }
     }
+
+    .grid-list-wrapper {
+		.full-img {
+            h4, h2 {
+				font-size: 4rem;
+			}
+        }
+    }
 }
 
 ul {
@@ -173,9 +181,9 @@ ul {
     }
 
     .product--container {
-        a {
-            color: $lightBlue;
-        }
+        // a {
+        //     color: $lightBlue;
+        // }
     }
     .product-vendor {
         font-weight: 400 !important;
@@ -189,7 +197,6 @@ ul {
     .price  {
         color: $lightBlue !important;
         font-size: 3.2rem;
-        // font-weight: 400px;
     }
 
     .product-form__quantity {
@@ -198,14 +205,14 @@ ul {
         }
     }
 
-    // .variants-ui__option-name {
-    //     font-style: italic;
-    //     font-weight: 400 !important;
-    // }
 }
 
-h2 {
-    margin-bottom: 30px;
+a {
+    color: $black;
+}
+
+h2, h1 {
+    margin-bottom: .6em !important;
     margin-top: 0 !important;
 }
 
@@ -225,7 +232,7 @@ html body a {
     }
 }
 
-a:not(li a):not(.button), .social-sharing a {
+a:not(li a):not(.button):not(a > div *), .social-sharing a {
     color: $lightBlue !important;
 }
 
@@ -315,6 +322,10 @@ header {
            }
         }
     }
+}
+
+.breadcrumbs a {
+    color: $lightBlue;
 }
 
 // .promo-grid--section {

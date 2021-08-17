@@ -1,10 +1,4 @@
-// .site-header-full-width {
-//   padding-top: 0 !important;
-//   padding-bottom: 0 !important;
-//   padding-left: 0 !important;
-//   padding-right: 0 !important;
-// }
-// }
+
 #shopify-section-announcement-bar {
   background-color: $lightBlue;
 
@@ -52,8 +46,6 @@
       padding: 17px 0;
     }
     .header__heading-logo {
-      // height: 65px !important;
-      // width: auto;  
       height: 56px;
       width: auto;
     }
@@ -108,99 +100,8 @@
     }
   }
 
-  //   .site-navigation-wrapper {
-  //     flex-wrap: nowrap;
-  //   }
-
-  //     .site-navigation {
-  //       padding-left: 0 !important;
-  //       padding-right: 0 !important;
-  //       justify-content: flex-end;
-
-  //       .navmenu-depth-1 {
-  //         flex-wrap: nowrap;
-  //         padding-top: 0;
-  //         padding-bottom: 0;
-  
-  //         & > li {
-  //           padding-top: 0;
-  //           padding-bottom: 0;
-  
-  //           a {
-  //             display: flex;
-  //             height: 85px;
-  //             align-items: center;
-  //           }
-            
-  
-  //           .navmenu-icon.navmenu-icon-depth-1 {
-  //             top: 0;
-  //             right: -5px;
-  //           }
-  //         }
-  
-  //       }
-
-  //     }
-
-  // }
 }
 
-
-// @media #{$desktop}  and (max-width: 380px) {
-	// .site-header-main {
-      
-  //     .site-navigation {
-  //       justify-content: space-between;
-  //       align-items: center;
-  //       padding-left: 0 !important;
-  //       padding-right: 0 !important;
-
-        // .navmenu-depth-2 {
-
-        //   li {
-        //       a {
-        //           color: $darkBlue;
-        //       }
-        //   }
-        //   & > .navmenu-item-parent {
-        //       a {
-        //           font-weight: 700;
-        //           font-size: 2.5rem !important;
-        //       }
-        
-        //      & > .navmenu-item-parent {
-        //          a {
-        //               font-weight: 700;
-        //               font-size: 2.5rem !important;
-        //          }
-        //      }
-        
-        //      ul {
-        //          top: 0;
-        //          left: 0;
-        //          position: relative !important;
-        //          width: 100%;
-        //          margin-left: 0;
-        //      }
-        //   }
-        // }
-    //   }
-    // }
-// }
-
-// @media #{$desktop} and (max-width: 380px){
-//   header {
-
-//     .site-navigation {
-        
-//       li {
-//           margin-right: 35px;
-//       }
-
-//     }
-//   }
-// } 
 
 @media (max-width: 1550px) {
   header {
@@ -218,27 +119,10 @@
 } 
 
 @media #{$wide} {
-	// .site-header-main {
-
-  //   .site-logo {
-  //     width: 270px;  
-  //   }
-      
-  //     .site-navigation {
-        
-  //       li {
-  //           margin-right: 45px;
-  //       }
-  //     }
-  //   }
 
     header {
 
       .header-inner-wrapper {
-        .header__heading-logo {
-          // width: 270px !important;
-          // height: auto;  
-        }
           
           .list-menu {
             & > li {

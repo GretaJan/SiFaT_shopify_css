@@ -18,6 +18,10 @@
         position: relative;
         opacity: 0;
         height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &::before {
             content: '✕';
@@ -51,14 +55,6 @@
             align-items: center;
             overflow: auto;
             
-            & > * {
-
-                // height: 100%;
-                // width: 100%;
-                // max-width: 800px;
-                // max-height: 800px;
-                
-            }
         }
     }
 
@@ -69,6 +65,11 @@
             transition-delay: 250ms;
             transition-property: transform;
             opacity: 1;
+
+            &::before {
+                right: 2vw;
+                top: 2vw;
+            }
         }
     }
 }
@@ -93,9 +94,22 @@
         .full-modal-inner {
 
             &::before {
-                right: .5vw;
-                top: .5vw;
+                right: 4vw;
+                top: 4vw;
             }
         }
     }
 }
+
+// @media (min-width: 1500px) {
+//     .full-modal {
+    
+//         .full-modal-inner {
+
+//             &::before {
+//                 right: .5vw;
+//                 top: .5vw;
+//             }
+//         }
+//     }
+// }
