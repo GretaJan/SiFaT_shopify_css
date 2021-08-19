@@ -298,6 +298,20 @@ header {
                 fill: $whiteColor;
             }
         }
+
+        .header-submenu-inner {
+            .submenu-item-1-level-link {
+                font-size: 3rem !important;
+                font-weight: 700 !important;
+            }
+            .submenu-item-2-level-link, .submenu-item-3-level-link {
+                font-size: 2.6rem !important;
+            }
+
+            .vendor-submenu-item {
+                font-weight: 700;
+            }
+        }
     }
 
 

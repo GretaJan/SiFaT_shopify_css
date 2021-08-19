@@ -7,7 +7,9 @@
         // @include sideWrap;
 
 
-        .product-gallery-wrap { grid-area: gallery; }
+        .product-gallery-wrap { 
+            grid-area: gallery;
+         }
         .product-title { 
             grid-area: title; 
         }
@@ -175,6 +177,12 @@
                 }
                 button {
                     @include fitContentHeight;
+                }
+            }
+
+            .product-gallery-wrap {
+                .slides-container-outer-wrap {
+                    position: relative;
                 }
             }
         }

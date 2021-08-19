@@ -204,10 +204,48 @@ body {
 
 .grid-gap-large-equal {
 
-	.grid-section-item:not(:last-child) {
+	.grid-section-item {
 		margin-bottom: 20px;
 	}
 
+}
+
+.arrow-decoration-list-item {
+	padding-left: 22px;
+	line-height: 1.1em;
+	font-weight: 700;
+	position: relative;
+
+	&::before {
+		content: "";
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		display: inline-block;
+		left: 0;
+		height: 15px;
+		width: 15px;
+		position: absolute;
+		top: 7px;
+	}
+	&.arrow-darkblue {
+			&::before {
+				background-image: url(arrows-darkblue.png);
+			}
+	}   
+
+	&.arrow-lightblue {
+			&::before {
+				background-image: url(arrows-lightblue.png);
+			}
+	}   
+
+	
+	&.arrow-white {
+			&::before {
+				background-image: url(arrows-white.png);
+			}
+	}  
 }
 
 
@@ -448,7 +486,7 @@ body {
 
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-around;
 
 		.grid-section-item  {
 			max-width: 40%;
@@ -553,17 +591,10 @@ body {
 .small-container {
 	height: 200px;
 
-	.flickity-container {
-		height: 200px;
-	}
 }
 
 .medium-container {
 	height: 460px;
-
-	.flickity-container {
-		height: 460px;
-	}
 }
 
 .intermediate-container {
@@ -585,18 +616,11 @@ body {
 .extra-large-container {
 	height: 90vh;
 
-	.flickity-container {
-		height: 90vh;
-		min-height: 600px;
-	}
 }
 
 .fit-screen-container {
 	height: 100vh;
 
-	.flickity-slider {
-		height: 100vh;
-	}
 }
 
 
@@ -721,8 +745,9 @@ body {
 }
 
 
-.darkblue-background  {
-	background-image: url(small-blue-background-quality.jpg);
+.darkblue-background, .blue-background  {
+	// background-image: url(small-blue-background-quality.jpg);
+	background-color: $darkBlue;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -755,8 +780,13 @@ body {
 		}
 }
 
+[class*="-background"]:not(.transparent-background):not(.lightblue-background) {
+	background-image: linear-gradient(to bottom, $blackTransparentLighter, rgba(255,255,255,.11), $blackTransparentLighter);
+}
+
 .darkblue-background-big  {
-	background-image: url(darkblue-background-big.jpg);
+	// background-image: url(darkblue-background-big.jpg);
+	background-color: $darkBlue;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -925,10 +955,11 @@ body {
 
 	.grid-gap-large-equal {
 		flex-wrap: nowrap;
+		justify-content: space-between;
 
 		.grid-section-item  {
 			max-width: 30%;
-			margin-bottom: 0;
+			margin-bottom: 0 !important;
 		}
 	}
 

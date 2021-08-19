@@ -1,6 +1,14 @@
-.swiper-container  .swiper-slide {
-    height: 100% !important;
+.swiper-container  {
+
+    .swiper-slide {
+        height: 100% !important;
+    }
+
 }
+
+    [class*="swiper-button"] {
+        z-index: 1;
+    }
 
 .banner-section, .carousel-section {
     min-height: 0;
@@ -124,8 +132,6 @@
 .swiper-button-next {
     right: 10px;
 }
-
-
 
 
 

@@ -88,7 +88,7 @@
         align-items: center;
       }
 
-      .list-menu {
+      .parent-list-menu {
 
         & > li span:first-child {
           height: 100%;
@@ -109,7 +109,7 @@
     .header-inner-wrapper {
 
         
-        .list-menu {
+        .parent-list-menu {
           & > li {
             margin-right: 35px;
           }  
@@ -124,7 +124,7 @@
 
       .header-inner-wrapper {
           
-          .list-menu {
+          .parent-list-menu {
             & > li {
               margin-right: 45px;
             }  

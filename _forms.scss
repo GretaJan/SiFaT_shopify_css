@@ -46,6 +46,10 @@ input {
     height: 60px !important;
 }
 
+input::placeholder {
+    color: $black !important;
+}
+
 form.search {
     display: flex;
     align-items: center;

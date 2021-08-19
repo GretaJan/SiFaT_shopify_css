@@ -255,7 +255,14 @@
 			}
 
 		}
+	}
 
+	.collection-no-img {
+		.grid-content-wrapper {
+			height: 100%;
+			width: 100%;
+			padding: 30px;
+		}
 	}
 
 }
@@ -491,6 +498,16 @@
 	
 	.grid-large-height {
 		height: 600px !important;
+	}
+
+	.grid-gap-large-equal {
+
+		.grid-item-inner-wrapper {
+			display: block !important;
+		}
+		img {
+			height: 120px !important;
+		}
 	}
 
 }
