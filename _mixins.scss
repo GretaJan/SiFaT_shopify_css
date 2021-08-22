@@ -214,6 +214,47 @@
 }
 
 
+@mixin gridSmall {
+	height: 150px;
+
+    @media #{$tablet} {
+        height: 120px
+    }
+
+}
+
+@mixin gridMedium {
+    height: 70vh; 
+	min-height: 480px;
+
+    @media #{$tablet} {
+        height: 400px;
+        min-height: 0;
+    }
+
+    @media #{$desktop} {
+        height: 445px
+    }
+}
+
+@mixin gridLarge {
+    height: 80vh;
+
+    @media #{$tablet} {
+        height: 600px
+    }
+
+    @media #{$desktop} {
+        height: 700px
+    }
+
+}
+
+@mixin gridFull {
+    height: 100vh;
+}
+
+
 @mixin transition {
     transition: all .4s ease-in-out;
 }

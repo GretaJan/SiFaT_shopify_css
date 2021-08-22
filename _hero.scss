@@ -12,7 +12,6 @@
         }
 
         .collection-hero__image-container  {
-            position: absolute;
             height: 70%;
             width: 100%;
             bottom: 0;
@@ -24,12 +23,104 @@
                 object-fit: contain;
                 object-position: bottom;
             }
+
         }
     }
 }
 
+.hero-block{
+    .collection-hero__inner {
+        .image-block {
+            position: absolute;
+        }
+    }
+}
+
+// .with-video-media {
+//     .collection-hero__inner  {
+//         .media {
+//             height: 400px;
+//             max-height: 90vh;
+//             iframe {
+//                 width: 100%;
+//                 max-width: 600px;
+//                 left: 50%;
+//                 transform: translate(-50%);
+//             }
+
+//         }
+//     }
+// }
+
+
+
+
+.product-hero-banner {
+    z-index: 0;
+    & > div {
+        height: 100%
+    }
+
+    .collection-hero__image-container  {
+        height: 416px;
+
+    }
+
+}
+
+
 
 @media #{$tablet} {
+    .hero-block:not(.product-hero-banner) {
+        .collection-hero__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .collection-hero__image-container  {
+                position: relative;
+                width: 55%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .collection-hero__text-wrapper  {
+                width: 40%;
+            }
+
+        }
+    }
+
+    .hero-block {
+        .collection-hero__inner {
+            .collection-hero__image-container  {
+
+                img {
+                    position: relative;
+                    width: 85%;
+                }
+
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 1250px) {
+    .with-video-media {
+        @include fitContentHeight;
+        min-height: 0;
+        @include verticalWrap-tiny;
+
+        // .video-block {
+        //     margin-top: 3rem;
+        // }
+
+    }
+}
+
+@media (min-width: 1250px) {
     .hero-block {
         .collection-hero__inner {
             display: flex;
@@ -41,7 +132,7 @@
             }
 
 
-            .collection-hero__image-container  {
+            .image-block {
                 position: relative;
                 width: 55%;
                 display: flex;
@@ -52,11 +143,32 @@
                     position: relative;
                     width: 85%;
                 }
+
+                // iframe {
+                //     width: 90%;
+                //     left: 10%;
+                // }
             }
 
         }
     }
-    
+
+    // .with-video-media {
+    //     .collection-hero__inner {
+    //         .collection-hero__image-container  {
+
+
+    //             iframe {
+    //                 left: 0;
+    //                 margin-left: 100%;
+    //                 transform: translate(-100%);
+    //                 width: 95%;
+    //                 min-width: 750px;
+    //             }
+    //         }
+    //     }
+    // }
+
 }
 
 // @media #{$desktop} {

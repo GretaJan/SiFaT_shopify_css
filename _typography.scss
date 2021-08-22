@@ -232,7 +232,7 @@ html body a {
     }
 }
 
-a:not(li a):not(.button):not(a > div *), .social-sharing a {
+a:not(li a):not(.button):not(.link-block-dark a):not(.grid-content-wrapper > a):not(.transparent-background > a), .social-sharing {
     color: $lightBlue !important;
 }
 
@@ -300,11 +300,11 @@ header {
         }
 
         .header-submenu-inner {
-            .submenu-item-1-level-link {
+            .submenu-item-link-level-1 {
                 font-size: 3rem !important;
                 font-weight: 700 !important;
             }
-            .submenu-item-2-level-link, .submenu-item-3-level-link {
+            .submenu-item-link-level-2, .submenu-item-link-level-3 {
                 font-size: 2.6rem !important;
             }
 

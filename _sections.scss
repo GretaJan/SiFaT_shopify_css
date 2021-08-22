@@ -14,6 +14,10 @@
     }
 }
 
+.section-with-breadcrumbs {
+	
+}
+
 
 .lightblue-element-bottom, .darkblue-element-bottom  {
 	position: relative;
@@ -31,6 +35,8 @@
 
 	& > *:last-child > *:last-child {
 		margin-bottom: 27px !important;
+		margin-block-end: 27px;
+		writing-mode: horizontal-tb;
 	}
 }
 .lightblue-element-bottom, .darkblue-element-bottom {
