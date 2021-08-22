@@ -279,3 +279,9 @@
     height: -moz-max-content !important;
     height: -webkit-max-content !important;
 }
+
+@mixin mediaBoxShadow {
+	-webkit-box-shadow:  -1px 1px 8px 5px rgba(0, 20, 65,0.2);
+	-moz-box-shadow:  -1px 1px 8px 5px rgba(0, 20, 65,0.2);
+	box-shadow:   -1px 1px 8px 5px rgba(0, 20, 65,0.2);
+}

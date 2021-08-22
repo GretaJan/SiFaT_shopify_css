@@ -232,7 +232,7 @@ html body a {
     }
 }
 
-a:not(li a):not(.button):not(.link-block-dark a):not(.grid-content-wrapper > a):not(.transparent-background > a), .social-sharing {
+a:not(li a):not(.button):not(.link-block-dark a):not(.grid-content-wrapper > a):not(.transparent-background > a):not(.swiper-wrapper a):not(.article-item a), .social-sharing {
     color: $lightBlue !important;
 }
 
