@@ -65,7 +65,7 @@ body {
 
 //medium top
 .m-t-v_gap {
-	@include verticalWrap;
+	@include verticalWrap-top;
 }
 
 
@@ -278,7 +278,6 @@ iframe {
     }
 }
 
-// .grid-cols--2, .grid-cols--3, .grid-cols--4, .grid-cols--5, .grid-cols--multiple {
 [class*="grid-cols-"]:not(.grid-gap-large-equal):not(.grid-cols--30-30-30), [class*="grid-row-cols"]:not(.grid-gap-large-equal):not(.grid-cols--30-30-30) {
 	display: grid !important;
 	display: -ms-grid !important;
@@ -458,17 +457,6 @@ iframe {
 	}
 }
 
-// @media (min-width: 1250px) {
-// 	.simple-content-block [class*="grid-cols--"]   {
-// 		.video-block {
-// 			justify-content: flex-end;
-
-// 		    iframe {
-// 				width: 100%;
-//             }
-// 		}
-// 	}
-// }
 
 .grid-cols--30-30-30, .grid-cols--30-40-30, .grid-cols--30-30-40, .grid-cols--20-20-60, .grid-cols--60-20-20 {
 	display: flex !important;
@@ -530,22 +518,6 @@ iframe {
 		width: 100%;
 	}
 }
-
-
-
-
-
-// {
-// 	grid-template-columns: repeat(2, minmax(0, 1fr))
-// }
-
-// .grid-cols--30-40-30 {
-// 	grid-template-columns: minmax(0, 1fr)
-// }
-
-// .grid-cols--30-30-40 {
-// 	grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 1fr);
-// }
 
 
 html body {
@@ -639,15 +611,6 @@ html body {
 				overflow: visible !important;
 			}
 
-			// .image-block {
-			// 	position: relative !important;
-			// 	overflow: visible !important;
-			// }
-
-
-			// .grid-section-item:not(:last-child) {
-			// 	margin-bottom: 20px;
-			// }
 		
 		}
 	}
@@ -661,28 +624,13 @@ html body {
 	
 			.grid-section-item  {
 				max-width: 200px !important;
-	
-				// .grid-item-inner-wrap {
-				// 	justify-content: center;
-				// 	align-items: center;
-				// 	display: flex;
-				// 	align-content: center;
-				// }
 			}
 		}
 	}
 	
 }
 
-@media (min-width: 830px) {
 
-	// .grid-gap-large-equal {
-
-	// 	.grid-section-item  {
-	// 		max-width: 200px;
-	// 	}
-	// }
-}
 
 @media #{$tabletMax} and (min-width: 768px) {
     .has-block-below {
@@ -850,30 +798,14 @@ html body {
 }
 
 .darkblue-background, .blue-background  {
-	// background-image: url(small-blue-background-quality.jpg);
 	background-color: $darkBlue;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	// &:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt) {
 		a, p, h1, h2, h3, h4, h6, li {
 			color: $whiteColor;
 		}
-		// & > *:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt) {
-		// 	a:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt), 
-		// 	p:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt), 
-		// 	h1:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt), 
-		// 	h2:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt), 
-		// 	h3:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt), 
-		// 	h4:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt), 
-		// 	h5:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt), 
-		// 	h6:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt), 
-		// 	li:not(.lightblue-txt):not(.darkblue-txt):not(.black-txt):not(.red-txt) {
-		// 		color: $whiteColor;
-		// 	}
-		// }
-	// }
 
 	h5 {
 		color: $lightBlue;
@@ -968,9 +900,6 @@ html body {
 	display: none;
 }
 
-// .image-block {
-// 	overflow: hidden;
-// }
 
 .item-text-below, .carousel-text-below {
 
@@ -1088,7 +1017,7 @@ html body {
 	
 		.grid-cols--30-30-30 {
 			& > * {
-				width: 48%;
+				width: 42%;
 			}
 		}
 	}

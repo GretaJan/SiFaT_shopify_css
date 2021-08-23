@@ -131,7 +131,7 @@ h4 {
   margin-top: 0;
   margin-bottom: 0; }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, input, textarea {
   font-family: "Kanit" !important; }
 
 ul {
@@ -168,7 +168,7 @@ html body a {
   font-weight: 700;
   color: #fff; }
 
-a:not(li a):not(.button):not(.link-block-dark a):not(.grid-content-wrapper > a):not(.transparent-background > a):not(.swiper-wrapper a):not(.article-item a), .social-sharing {
+a:not(li a):not(.button):not(.link-block-dark a):not(.grid-content-wrapper > a):not(.transparent-background > a):not(.swiper-wrapper a):not(.article-item a):not(.black-txt):not(.white-txt):not(.darkblue-txt):not(.yellow-txt), .social-sharing {
   color: #00B1FF !important; }
 
 .textAlignLeft h1, .textAlignLeft h2, .textAlignLeft h3, .textAlignLeft h4, .textAlignLeft h5, .textAlignLeft p {
@@ -301,15 +301,23 @@ a {
 
 .subheading .lightblue-txt {
   color: #00B1FF !important; }
+  .subheading .lightblue-txt label, .subheading .lightblue-txt input, .subheading .lightblue-txt p, .subheading .lightblue-txt h1, .subheading .lightblue-txt h2, .subheading .lightblue-txt h3, .subheading .lightblue-txt h4, .subheading .lightblue-txt h5 {
+    color: #00B1FF !important; }
 
 .subheading .blue-txt {
   color: #01426c !important; }
+  .subheading .blue-txt label, .subheading .blue-txt input, .subheading .blue-txt p, .subheading .blue-txt h1, .subheading .blue-txt h2, .subheading .blue-txt h3, .subheading .blue-txt h4, .subheading .blue-txt h5 {
+    color: #01426c !important; }
 
 .subheading .black-txt {
   color: #001441 !important; }
+  .subheading .black-txt label, .subheading .black-txt input, .subheading .black-txt p, .subheading .black-txt h1, .subheading .black-txt h2, .subheading .black-txt h3, .subheading .black-txt h4, .subheading .black-txt h5 {
+    color: #001441 !important; }
 
 .subheading .white-txt {
   color: #fff !important; }
+  .subheading .white-txt label, .subheading .white-txt input, .subheading .white-txt p, .subheading .white-txt h1, .subheading .white-txt h2, .subheading .white-txt h3, .subheading .white-txt h4, .subheading .white-txt h5 {
+    color: #fff !important; }
 
 form label, form input, form p, form h1, form h2, form h3, form h4, form h5 {
   color: #001441 !important; }
@@ -800,13 +808,60 @@ footer .footer__content-bottom {
     width: 100% !important;
     max-width: 300px !important; }
 
+button {
+  cursor: pointer; }
+
 form .form-field-title {
   top: 0 !important;
   left: 0 !important;
   position: relative;
   width: 100% !important; }
 
-input {
+.contact-section form {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+.contact-section .button-wrap {
+  margin-top: 50px; }
+  .contact-section .button-wrap .button {
+    margin-left: auto;
+    margin-right: auto; }
+.contact-section .contact-fields {
+  display: -ms-grid;
+  display: -moz-grid;
+  display: -moz-grid-group;
+  display: -moz-grid-line;
+  display: -ms-inline-grid;
+  display: -moz-inline-grid;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  grid-template-areas: 'message' 'firstName'  'lastName' 'email'  'phone'; }
+  .contact-section .contact-fields .message {
+    grid-area: message; }
+    .contact-section .contact-fields .message textarea {
+      width: 100%;
+      height: 14em;
+      resize: none; }
+  .contact-section .contact-fields .first-name {
+    grid-area: firstName; }
+    .contact-section .contact-fields .first-name input {
+      width: 100%; }
+  .contact-section .contact-fields .last-name {
+    grid-area: lastName; }
+    .contact-section .contact-fields .last-name input {
+      width: 100%; }
+  .contact-section .contact-fields .email {
+    grid-area: email; }
+    .contact-section .contact-fields .email input {
+      width: 100%; }
+  .contact-section .contact-fields .phone {
+    grid-area: phone; }
+    .contact-section .contact-fields .phone input {
+      width: 100%; }
+
+input, textarea {
   color: #01426c !important;
   font-size: 2.2rem !important;
   padding: .5em .5em !important;
@@ -819,6 +874,9 @@ input {
 
 input::placeholder {
   color: #001441 !important; }
+
+.contact-section input, .contact-section textarea {
+  border: 1px solid #001441 !important; }
 
 form.search {
   display: flex;
@@ -833,6 +891,10 @@ form.search {
   height: 24px;
   width: 24px; }
 
+@media only screen and (min-width: 768px) {
+  .contact-section .contact-fields {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'message message' 'firstName lastName' 'email phone'; } }
 .section-title h2 {
   padding: 0;
   margin: 0; }
@@ -1143,7 +1205,7 @@ section.slideshow {
   .grid-list-wrapper .full-img .grid-item-inner-wrapper {
     align-items: center;
     justify-content: center; }
-  .grid-list-wrapper .grid-item-inner-wrapper {
+  .grid-list-wrapper .grid-item-inner-wrapper:not(.img-with-logo .grid-item-inner-wrapper) {
     height: 100%;
     width: 100%;
     position: relative; }
@@ -1775,6 +1837,13 @@ section.blogposts .image-block img, .blog-articles .image-block img {
   .full-modal .full-modal-inner::before {
     right: 4vw;
     top: 4vw; } }
+.blog-hero .slide-content {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center; }
+
 .hero-block .collection-hero__inner {
   position: relative;
   height: 100%; }
@@ -1930,8 +1999,7 @@ body {
   padding-bottom: 20px; }
 
 .m-t-v_gap {
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-top: 20px; }
 
 .m-bt-v_gap {
   padding-bottom: 20px; }
@@ -2630,7 +2698,7 @@ html body .img-small {
     grid-gap: 90px;
     gap: 90px; }
   html body .grid-cols--30-30-30 > * {
-    width: 48%; } }
+    width: 42%; } }
 @media only screen and (min-width: 991px) {
   html body .large-container {
     min-height: 700px; }

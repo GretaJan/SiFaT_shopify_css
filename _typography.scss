@@ -128,9 +128,6 @@ ul {
     text-decoration: none !important;
 }
 
-// h1, h2, h3, h4, h5, h6, p {
-//     padding-bottom: 1.4em;
-// }
 h1, h2, h3, h4, h6 {
     font-style: italic;
     font-weight: 700;
@@ -164,7 +161,7 @@ h4 {
     margin-bottom: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, input, textarea {
     font-family: "Kanit" !important;
 }
 
@@ -232,7 +229,7 @@ html body a {
     }
 }
 
-a:not(li a):not(.button):not(.link-block-dark a):not(.grid-content-wrapper > a):not(.transparent-background > a):not(.swiper-wrapper a):not(.article-item a), .social-sharing {
+a:not(li a):not(.button):not(.link-block-dark a):not(.grid-content-wrapper > a):not(.transparent-background > a):not(.swiper-wrapper a):not(.article-item a):not(.black-txt):not(.white-txt):not(.darkblue-txt):not(.yellow-txt), .social-sharing {
     color: $lightBlue !important;
 }
 
@@ -342,25 +339,6 @@ header {
     color: $lightBlue;
 }
 
-// .promo-grid--section {
-// 	.grid-cols--4 {
-// 		h2, p, h4 {
-// 			color: $whiteColor !important;
-// 		}
-//     }
-
-//     .img-top {
-//         p, a, h1, h2, h3, h4, h5, h4, span {
-//             color: $black !important;
-//         }
-//         // .button-primary {
-            
-//         //     &:hover {
-//         //         color: $lightBlue !important;
-//         //     }
-// 		// }
-//     }
-// }
 
 @media (max-width: 1550px) {
     header {
@@ -398,7 +376,7 @@ header {
     color: $black !important;
 
     p, a, h1, h2, h3, h4, h5, h4, span, a {
-    color: $black !important;
+        color: $black !important;
     }
 
 }
@@ -421,6 +399,7 @@ header {
     }
 
 }
+
 
 .red-txt {
     color: $red !important;
@@ -476,7 +455,6 @@ header {
         font-size: 3.2rem !important;
         font-weight: 400;
         line-height: 1.2em;
-        // font-weight: 700;
     }
 
     .white {
@@ -516,25 +494,40 @@ header {
 
 .subheading {
     .lightblue-txt {
-        color: $lightBlue !important
+        color: $lightBlue !important;
+
+        label, input, p, h1, h2, h3, h4, h5  {
+            color: $lightBlue !important
+        }
     }
 }
 
 .subheading {
     .blue-txt {
-        color: $darkBlue !important
+        color: $darkBlue !important;
+
+        label, input, p, h1, h2, h3, h4, h5  {
+            color: $darkBlue !important
+        }
     }
 }
 
 .subheading {
     .black-txt {
-        color: $black !important
+        color: $black !important;
+
+        label, input, p, h1, h2, h3, h4, h5  {
+            color: $black !important;
+        }
     }
 }
 
 .subheading {
     .white-txt {
-        color: $whiteColor !important
+        color: $whiteColor !important;
+        label, input, p, h1, h2, h3, h4, h5  {
+            color: $whiteColor !important
+        }
     }
 }
 

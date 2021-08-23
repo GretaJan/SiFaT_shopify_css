@@ -50,23 +50,6 @@
    @include verticalWrap-tiny-top; 
 }
 
-// @mixin verticalWrap-top {
-//     padding-top: 1.5rem; 
-//     margin-top: 0 !important;
-// 	margin-bottom: 0 !important;
-//     @media #{$desktop} {
-//         padding-top: 3rem; 
-//     }
-// }
-
-// @mixin verticalWrap-bottom {
-//     padding-bottom: 1.5rem; 
-//     margin-top: 0 !important;
-// 	margin-bottom: 0 !important;
-//     @media #{$desktop} {
-//         padding-bottom: 3rem; 
-//     }
-// }
 
 @mixin verticalWrap-top {
     padding-top: 20px;
@@ -100,7 +83,6 @@
     @include verticalWrap-smallmedium-top; 
 }
 
-/////////
 
 
 @mixin verticalWrap {

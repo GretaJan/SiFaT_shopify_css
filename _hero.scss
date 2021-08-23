@@ -1,13 +1,21 @@
 
 
+.blog-hero {
+    .slide-content {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
 .hero-block {
     .collection-hero__inner {
         position: relative;
         height: 100%;
 
         [class*="grid-cols--"] {
-            // align-items: center;
-            // align-content: center;
             height: 100%;
         }
 
@@ -64,21 +72,6 @@
     }
 }
 
-// .with-video-media {
-//     .collection-hero__inner  {
-//         .media {
-//             height: 400px;
-//             max-height: 90vh;
-//             iframe {
-//                 width: 100%;
-//                 max-width: 600px;
-//                 left: 50%;
-//                 transform: translate(-50%);
-//             }
-
-//         }
-//     }
-// }
 
 
 
@@ -95,33 +88,6 @@
 
 }
 
-
-
-@media #{$tablet} {
-    // .hero-block {
-    //     .collection-hero__inner {
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: space-between;
-
-    //         .image-block {
-    //             position: relative;
-    //             width: 100%;
-    //             display: flex;
-    //             justify-content: center;
-    //             align-items: center;
-
-    //             img {
-    //                 object-position: center;
-    //             }
-    //         }
-
-
-    //     }
-    // }
-
-    
-}
 
 @media (max-width: 1250px) {
     .with-video-media {
@@ -176,55 +142,8 @@
                     width: 95%;
                 }
             }
-
-
-
-            // display: flex;
-            // align-items: center;
-            // justify-content: space-between;
-
-            // .collection-hero__text-wrapper  {
-            //     width: 40%;
-            // }
-
-
-            // .image-block {
-            //     position: relative;
-            //     display: flex;
-            //     justify-content: center;
-            //     align-items: center;
-            //     height: 100%;
-
-            //     img {
-            //         position: relative;
-            //         width: 85%;
-            //     }
-            // }
-
-                // iframe {
-                //     width: 90%;
-                //     left: 10%;
-                // }
-        //     }
-
-        // }
     }
 
-    // .with-video-media {
-    //     .collection-hero__inner {
-    //         .collection-hero__image-container  {
-
-
-    //             iframe {
-    //                 left: 0;
-    //                 margin-left: 100%;
-    //                 transform: translate(-100%);
-    //                 width: 95%;
-    //                 min-width: 750px;
-    //             }
-    //         }
-    //     }
-    // }
     }
 
 }
@@ -232,11 +151,7 @@
 
     html body {
         .hero-block {
-            // .collection-hero__inner {
-            //     gap: 130px;
-            // }
 
-        
          .video-block {
 
                     iframe {
@@ -246,14 +161,5 @@
             }
     }
    
-    
-// }
 
-// @media #{$wide} {
-//     .hero-block {
-//         .collection-hero__inner {
-//             gap: 200px;
-//         }
-//     }
-    
 }

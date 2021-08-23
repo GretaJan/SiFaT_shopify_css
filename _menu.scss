@@ -155,13 +155,6 @@
                     overflow: hidden;
                 }
     
-                // details[open] {
-                //     .header__submenu {
-                //         height: 0;
-                //         overflow: hidden;
-                //     }
-                // }
-    
             }
     
         
@@ -178,7 +171,6 @@
     }
 
 }
-// @media #{$desktop} {
 @media (min-width: 1350px) {
     .header--has-menu {
         .menu-drawer__utility-links {
