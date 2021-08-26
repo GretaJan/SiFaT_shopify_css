@@ -72,6 +72,35 @@
             }
         }
     }
+
+    .large-video-block {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        iframe {
+            width: 80%;
+            max-width: 1000px;
+            max-height: 750px;
+            height: 80%;
+        }
+    }
+}
+
+.full-modal.dark-modal {
+    background-color: $blackTransparent;
+    
+    .full-modal-inner {
+
+        &::before {
+            color: $whiteColor;
+            
+
+        }
+    }
+
 }
 
 @media #{$desktop} {

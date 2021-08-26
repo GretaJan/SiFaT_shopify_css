@@ -21,7 +21,38 @@
     }
 }
 
+.video-img-block {
+    img {
+        width: 100%;
+    }
+}
 
+.video-img-block {
+
+
+    .video-link {
+        @include fitContentHeight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+        position: relative;
+        cursor: pointer;
+    
+        .icon-play-item {
+            position: absolute;
+            z-index: 1;
+        }
+        &:hover {
+            .icon-play-item {
+                border: 3px solid $lightBlue;
+                &::after {
+                    border-left: 24px solid $lightBlue;
+                }
+            }
+        }
+    }
+}
 
 
 .logos-list {
@@ -268,6 +299,26 @@
 
 @media #{$tablet} {
 
+    .video-img-block {
+        img {
+            max-height: 420px;
+            object-fit: contain;
+        }
+    }
+
+    .video-img-block {
+        .video-link {
+            &:hover {
+                .icon-play-item {
+                    &::after {
+                        border-left: 37px solid $lightBlue;
+                    }
+                }
+            }
+        }
+    }
+
+
 
     .grid-2-cols {
 
@@ -398,6 +449,14 @@
 }
 
 @media #{$desktop} {
+
+    .video-img-block {
+        img {
+            max-height: 420px;
+            object-fit: contain;
+            object-position: right;
+        }
+    }
     
 	.grid-2-cols {
 

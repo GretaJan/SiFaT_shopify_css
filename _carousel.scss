@@ -2,6 +2,7 @@
 
     .swiper-slide {
         height: 100% !important;
+
     }
 
 }
@@ -81,6 +82,26 @@
 
 .carousel-section-inner {
     position: relative;
+
+    .video-link {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        right: 7.5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 85%;
+        height: 100%;
+        @include transition;
+
+        .icon-play-item {
+            margin-left: 30px;
+            margin-bottom: 70px;
+        }
+    }
+
+
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -134,7 +155,14 @@
 }
 
 
-
+@media #{$mobile} {
+    html body .carousel-text-middle {
+        .slide-content{
+            padding-left: 10vw !important;
+            padding-right: 10vw !important;
+        }
+    }
+}
 
 
 @media #{$tablet} {
@@ -198,7 +226,26 @@
         right: 0;
     }
 
+    html body .carousel-text-middle {
+        .slide-content{
+            padding-left: 4vw !important;
+            padding-right: 4vw !important;
+        }
+    }
+
+    .carousel-section-inner {
+    
+        .video-link {
+
+            .icon-play-item {
+                margin-bottom: 130px;
+            }
+        }
+    }
+
+
 }
+
 
 @media #{$desktop} {
     .carousel-grid-cols--2 {
@@ -274,26 +321,56 @@
     .swiper-button-next {
         right: 0;
     }
+
+    .carousel-section-inner {
+        .video-link {
+            right: 10%;
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            
+            .icon-play-item {
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .carousel-section-inner {
+        .slide-link {
+            right: 20%;
+        }
+    }
 }
 
 @media (min-width: 1450px) {
     .swiper-button-prev {
-        left: -30px;
+        left: 0px;
     }
     
     .swiper-button-next {
-        right: -30px;
+        right: 0px;
+    }
+
+    .carousel-section-inner {
+        .video-link {
+            right: 35%;
+        }
     }
 
 }
 
 @media (min-width: 1480px) {
     .swiper-button-prev {
-        left: -40px;
+        left: 0px;
     }
     
     .swiper-button-next {
-        right: -40px;
+        right: 0px;
     }
 
 }
@@ -301,10 +378,20 @@
 
 @media (min-width: 1600px) {
     .swiper-button-prev {
-        left: -90px;
+        left: 2vw;
     }
     
     .swiper-button-next {
-        right: -90px;
+        right: 2vw;
+    }
+
+    .product-gallery-wrap {
+        .swiper-button-prev {
+            left: 0;
+        }
+        
+        .swiper-button-next {
+            right: 0;
+        }
     }
 }
