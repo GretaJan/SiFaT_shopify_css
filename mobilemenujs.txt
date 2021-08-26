@@ -103,3 +103,57 @@ function removeBurger(){
     	if(!child) return;
 	child.setAttribute('href', '');
   }
+
+//////////
+
+         assign custom_type = section.settings.type 
+        assign video_link = block.settings.video_link 
+        assign image = block.settings.image 
+
+        assign imgPosition = block.settings.img_position 
+        assign imgCoverage = block.settings.img_coverage 
+
+
+        assign title = block.settings.title   
+        assign titleColor = block.settings.title_color 
+        assign titleSize = block.settings.title_size 
+         assign titleSubPosition = block.settings.title_subtitle_horizontal_position 
+         assign subtitle = block.settings.subtitle 
+         assign subtitleColor = block.settings.subheading_color 
+         assign paragraphPosition = block.settings.paragraph_horizontal_position
+         assign buttonPosition = block.settings.button_position
+         assign buttonPosition = block.settings.button_last
+         assign hideOnMobile = section.settings.hide_on_mobile 
+         assign textColor = block.settings.text_color 
+
+button_label   button_link    button_type
+
+
+
+ {% for collection in collections %}
+                                                  {% assign collectionJson = collection | json %} 
+                                                  {% assign collectionJsonDowncase = collectionJson | downcase %}
+                                                  {% if collectionJson contains childlink.title %}
+                                                      {% for parent_collection in collections %}
+                                                          {% assign collectionHasNum = 0 %}
+                                                          {% if grandchildlink.url == parent_collection.url and collectionJson contains parent_collection.title and collectionJsonDowncase contains childUrl and collectionJson contains 'tag' %}
+                                                              {% for product in parent_collection.products %}
+                                                                  {% for tag in product.tags %}
+                                                                                            {{collection.title}}
+                                              {{ tag }}
+                                                                      {% if collection.title == tag %}
+
+                                                                          <li class="submenu-item-level-2">
+                                                                            <a href="{{collection.url}}">
+                                                                                {{ collection.title }}
+                                                                            </a>
+                                                                          </li>
+                                                                      {% endif %}
+                                                                  {% endfor %}
+                                                              {% endfor %}
+                                                          {% endif %}
+                                                      {% endfor %}
+                                                  {% endif %}
+                                             {% endfor %}
+
+      shopify@marktbande.de                                                    {% if grandchildlink.url == parent_collection.url and collectionJson contains parent_collection.title and collectionJsonDowncase contains childUrl and collectionJson contains 'tag' %}

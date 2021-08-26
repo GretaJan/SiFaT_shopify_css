@@ -33,7 +33,7 @@
 		z-index: 1;
 	}
 
-	& > *:last-child > *:last-child {
+	&:not([class*="carousel"]) > *:last-child > *:last-child {
 		margin-bottom: 27px !important;
 		margin-block-end: 27px;
 		writing-mode: horizontal-tb;
@@ -45,6 +45,11 @@
 
 .lightblue-element-top, .darkblue-element-top {
 	top: 0;
+	&:not([class*="carousel"]) > *:last-child > *:last-child {
+		margin-top: 27px !important;
+		margin-block-start: 27px;
+		writing-mode: horizontal-tb;
+	}
 } 
 
 .darkblue-element-bottom, .darkblue-element-top {
