@@ -137,4 +137,62 @@
 
 }
 
+.button--quaternary {
+    border: 2px solid $whiteColor;
+    color: $whiteColor !important;
+    display: flex;
+    align-items: center;
+
+    span {
+        color: $whiteColor !important;
+    }
+
+    &::after {
+        background-image: url('arrows-white.png');
+    }
+
+    &:hover {
+        border: 2px solid $whiteColor !important;
+        background-color: $whiteColor !important;
+        color: $lightBlue !important;
+
+        span {
+            color: $lightBlue !important;
+        }
+
+        &::after {
+            background-image: url('arrows-lightblue.png');
+        }
+    }
+}
+
+.button--quinary {
+    border: 2px solid $whiteColor;
+    color: $whiteColor !important;
+    display: flex;
+    align-items: center;
+
+    span {
+        color: $whiteColor !important;
+    }
+
+    &::after {
+        background-image: url('arrows-white.png');
+    }
+
+    &:hover {
+        border: 2px solid $whiteColor !important;
+        background-color: $whiteColor !important;
+        color: $yellow !important;
+
+        span {
+            color: $yellow !important;
+        }
+
+        &::after {
+            background-image: url('arrows-lightblue.png');
+        }
+    }
+}
+
 

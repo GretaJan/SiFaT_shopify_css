@@ -1,8 +1,32 @@
+.banner-section {
+    .banner-inner-wrap {
+        position: relative;
+    }
+    
+    .original-img-height {
+        .image-block {
+            position: relative;
+        }
+        .slide-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }    
+}
+
+
 .swiper-container  {
 
     .swiper-slide {
         height: 100% !important;
 
+    }
+
+    .button {
+        margin-top: 50px;
     }
 
 }
@@ -51,6 +75,10 @@
 
 .banner-section, .carousel-section {
 
+    .banner-inner-wrap {
+        position: relative;
+    }
+
     .carousel-text-middle {
             .image-block {
                 position: absolute;
@@ -81,8 +109,18 @@
         }
         
     }
-
-
+        .original-img-height {
+            .image-block {
+                position: relative;
+            }
+            .slide-content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }    
 }
 
 .carousel-two-columns {
@@ -106,6 +144,7 @@
 
     .video-link {
         position: absolute;
+        z-index: 5;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
@@ -284,7 +323,7 @@
 }
 
 @media #{$desktopMax} {
-    html body .carousel-text-middle {
+    .carousel-text-middle {
         
         .slide-content {
             padding-left: 4vw !important;

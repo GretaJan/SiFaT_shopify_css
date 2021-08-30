@@ -279,7 +279,7 @@ iframe {
     }
 }
 
-[class*="grid-cols-"]:not(.grid-gap-large-equal):not(.grid-cols--30-30-30), [class*="grid-row-cols"]:not(.grid-gap-large-equal):not(.grid-cols--30-30-30) {
+[class*="grid-cols-"]:not(.grid-gap-large-equal):not(.grid-cols--30-30-30):not(.grid-cols--1), [class*="grid-row-cols"]:not(.grid-gap-large-equal):not(.grid-cols--30-30-30) {
 	display: grid !important;
 	display: -ms-grid !important;
 	display: -moz-grid !important;
@@ -287,6 +287,15 @@ iframe {
 	display: -moz-grid-line !important;
 	display: -ms-inline-grid !important;
 	display: -moz-inline-grid !important;
+}
+
+.grid-cols--1 {
+	.image-block {
+
+		img {
+			width: 100%;
+		}
+	}
 }
 
 .grid-gap-large-equal {
@@ -336,7 +345,7 @@ iframe {
 	}
 }
 
-.arrow-decoration-list-item {
+.arrow-decoration-list-item, body :not(header):not(footer) ul {
 	padding-left: 22px;
 	line-height: 1.1em;
 	font-weight: 700;
@@ -757,26 +766,42 @@ html body {
 }
 
 .intermediate-banner-container:not(.with-video-media) {
-	height: 65vh;
-	min-height: 500px;
-	max-height: 670px;
+	height: calc(65vh + 14rem);
+	min-height: 45rem;
+	max-height: 60rem;
+	@include verticalWrap-xlarge;
 }
 
 .intermediate-banner-container.with-video-media {
 	// height: 65vh;
 	// min-height: 500px;
 	// max-height: 670px;
+	@include verticalWrap-xlarge;
+}
+
+@media #{$desktop} {
+
+	.intermediate-banner-container:not(.with-video-media) {
+		max-height: 50rem;
+		min-height: 60rem;
+	}
+
+	.intermediate-banner-container.with-video-media {
+		height: calc(65vh + 28rem);
+		min-height: 50rem;
+		max-height: 60rem;
+	}
 }
 
 @media (max-width: 1250px) {
-	.intermediate-banner-container:not(.with-video-media) {
-		max-height: 95vh;
-	}
-	.intermediate-banner-container.with-video-media {
-		height: 65vh;
-		min-height: 500px;
-		max-height: 95vh;
-	}
+	// .intermediate-banner-container:not(.with-video-media) {
+	// 	max-height: 95vh;
+	// }
+	// .intermediate-banner-container.with-video-media {
+	// 	height: 65vh;
+	// 	min-height: 500px;
+	// 	max-height: 95vh;
+	// }
 
 }
 
@@ -873,6 +898,11 @@ html body {
 
 		a, p, h1, h2, h3, h4, h6, li {
 			color: $whiteColor;
+
+			span {
+				font-weight: 300;
+				color: $lightBlue;
+			}
 		}
 
 	h5 {
@@ -885,6 +915,11 @@ html body {
 	background-color: $whiteColor;
 	a, p, h1, h2, h3, h4, h6, li {
 		color: $black;
+
+		span {
+			font-weight: 300;
+			color: $lightBlue;
+		}
 	}
 
 	h5 {
@@ -897,6 +932,11 @@ html body {
 	background-color: $whiteColor;
 	a, p, h1, h2, h3, h4, h6, li {
 		color: $black;
+
+		span {
+			font-weight: 300;
+			color: $yellow;
+		}
 	}
 
 	h5 {
@@ -909,6 +949,11 @@ html body {
 
 	a, p, h1, h2, h3, h4, h5, h6, li {
 		color: $black;
+
+		span {
+			font-weight: 300;
+			color: $darkBlue;
+		}
 	}
 
 	h5 {
@@ -922,6 +967,11 @@ html body {
 
 	a, p, h1, h2, h3, h4, h5, h6, li {
 		color: $red;
+
+		span {
+			font-weight: 300;
+			color: $darkBlue;
+		}
 	}
 
 	h5 {
@@ -935,6 +985,11 @@ html body {
 	
 	a, p, h1, h2, h3, h4, h6, li {
 		color: $whiteColor;
+
+		span {
+			font-weight: 300;
+			color: $yellow;
+		}
 	}
 
 	h5 {
@@ -1021,6 +1076,12 @@ html body {
 .grid-cols--5 > .grid-section-item {
 	.image-block, .article-image-block {
 		@include transitionSlower;
+	}
+}
+
+[class*="grid-cols-"] {
+	 :not(.img-top):not(.full-img):not(.img-with-logo):not(.small-img-top):not(.logos-list):not(.carousel-text-below):not(.product-small-slide):not(.product-gallery-wrap):not(.product-price-form) {
+		
 	}
 }
 

@@ -24,7 +24,6 @@
 
 .video-img-block {
 
-
     .video-link {
         @include fitContentHeight;
         display: flex;
@@ -54,6 +53,15 @@
     }
 }
 
+.grid-cols--1 {
+    .video-img-block {
+        max-height: 100%;
+
+        .video-link {
+            width: 100%;
+        }
+    }
+}
 
 .logos-list {
 
@@ -108,7 +116,7 @@
     }
 }
 
-.img-with-logo {
+.img-with-logo, .block-with-button {
     .grid-item-inner-wrapper {
         position: relative;
         height: calc(100% - 60px);
@@ -164,9 +172,18 @@
 			}
 		}
     }
-
-
 }
+
+// .block-with-button {
+
+//     // h2 {
+//     //     font-weight: 300;
+//     // }
+//     // h2::first-line {
+//     //     font-weight: 700;
+//     //     color: $whiteColor;
+//     // }
+// }
 
 .img-top {
     h2 {
@@ -194,7 +211,7 @@
     }
 }
 
-.img-with-logo, .full-img {
+.img-with-logo, .block-with-button, .full-img {
     @include gridMedium;
 }
 
@@ -259,13 +276,13 @@
 
 		}
 
-		.grid-item-inner-wrapper:not(.img-with-logo .grid-item-inner-wrapper) {
+		.grid-item-inner-wrapper:not(.img-with-logo .grid-item-inner-wrapper):not(.block-with-button .grid-item-inner-wrapper) {
 			height: 100%;
 			width: 100%;
 			position: relative;
 		}
 
-		.img-with-logo {
+		.img-with-logo, .block-with-button {
 
             &.logo-mobile-hidden {
 				display: none;
@@ -357,11 +374,8 @@
 
     }
 
-    .img-with-logo {
-        .grid-content-wrapper {
-          
-        }
-    
+    .img-with-logo, .block-with-button {
+
         .image-block {
             right: 0;
             bottom: 0;
