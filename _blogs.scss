@@ -23,12 +23,11 @@ section.blogposts, .blog-articles {
 	}
 }
 
-.article-template {
-	.article-template__social-sharing {
-		margin-top: 3rem;
+.blogposts {
+	.article-card__header .item-title {
+		margin-bottom: 10px;
 	}
 }
-
 
 
 @media #{$tablet} {

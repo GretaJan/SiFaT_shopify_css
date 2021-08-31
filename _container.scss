@@ -141,6 +141,19 @@ body {
 }
 
 /****/
+.intermedium-top-bottom {
+	@include verticalWrap-medium-large;
+}
+
+.intermedium-top {
+	@include verticalWrap-medium-large-top;
+}
+
+.intermedium-bottom {
+	@include verticalWrap-medium-large-bottom;
+}
+
+/****/
 .extra-large-top-bottom {
 	@include verticalWrap-xlarge;
 }
@@ -152,6 +165,7 @@ body {
 .extra-large-bottom {
 	@include verticalWrap-xlarge-bottom;
 }
+
 
 iframe {
 	border: none !important; 
@@ -298,6 +312,10 @@ iframe {
 	}
 }
 
+.image-block {
+	max-width: 100%;
+}
+
 .grid-gap-large-equal {
 
 	.grid-section-item {
@@ -345,7 +363,7 @@ iframe {
 	}
 }
 
-.arrow-decoration-list-item, body :not(header):not(footer) ul {
+.arrow-decoration-list-item {
 	padding-left: 22px;
 	line-height: 1.1em;
 	font-weight: 700;
@@ -384,7 +402,7 @@ iframe {
 }
 
 
-.arrow-decoration-list {
+.arrow-decoration-list, body main ul:not(.breadcrumbs ul):not(.social-sharing) {
 	padding-left: 22px;
 	li {
 		font-size: 2.6rem;
@@ -433,6 +451,14 @@ iframe {
 	}  
 }
 
+body main ul:not(.breadcrumbs ul) {
+	& > li {
+		&::before {
+			background-image: url(arrows-lightblue.png);
+		}
+	}
+}
+
 .grid-cols--5 {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -458,7 +484,8 @@ iframe {
 .grid-cols--2_3,
 .grid-cols--3_4,
 .grid-cols--4_5,
-.grid-cols--3_5
+.grid-cols--3_5,
+.grid-cols--7_3,
 .grid-cols--50-50, 
 .grid-cols--45-55, 
 .grid-cols--55-45, 
@@ -476,6 +503,12 @@ iframe {
 
 	.grid-item-content-wrapper {
 		height: 100%;
+	}
+}
+
+.grid-cols--7_3 {
+	.image-block {
+		text-align: center;
 	}
 }
 
@@ -600,7 +633,7 @@ html body {
 	}
 	
 	.txt-position-right {
-		text-align: left;
+		text-align: right;
 	}
 	
 	.txt-position-center {
@@ -1217,7 +1250,7 @@ html body {
 			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 	
-		.grid-cols--4 {
+		.grid-cols--4:not(.list-full-img) {
 			grid-template-columns: repeat(4, 1fr);
 		}
 	
@@ -1269,6 +1302,14 @@ html body {
 		}
 		.grid-cols--3_5 {
 			grid-template-columns: 3.5fr 2.5fr;
+		}
+
+		.grid-cols--7_3 {
+			grid-template-columns: 7fr 3fr;
+
+			.image-block {
+				text-align: right;
+			}
 		}
 	
 		.grid-cols--30-30-30 {
@@ -1326,16 +1367,13 @@ html body {
 				width: 58%;
 			}
 		}
-	}
-
-	
-	
+	}	
 
 }
 
 @media #{$fullhd} {
 	html body {
-		.grid-cols--4 {
+		.list-full-img.grid-cols--4 {
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 		}
 	}

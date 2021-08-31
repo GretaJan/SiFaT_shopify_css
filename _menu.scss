@@ -258,6 +258,12 @@
         .details-disclosure {
             display: flex;
             align-items: center;
+
+            .list-menu__item-parent {
+                height: 90px;
+                display: flex;
+                align-items: center;
+            }
         }
 
         .header__submenu  {

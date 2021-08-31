@@ -1,12 +1,24 @@
 
 
+// .blog-hero {
+//     .slide-content {
+//         position: absolute;
+//         height: 100%;
+//         top: 0;
+//         display: flex;
+//         align-items: center;
+//     }
+// }
+
 .blog-hero {
-    .slide-content {
-        position: absolute;
-        height: 100%;
-        top: 0;
-        display: flex;
-        align-items: center;
+
+    .image-block {
+        height: 550px;
+        margin-top: 5rem;
+    }
+
+    .blog-excerpt {
+        margin-top: 3rem;
     }
 }
 

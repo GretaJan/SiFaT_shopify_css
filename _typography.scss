@@ -98,6 +98,17 @@ $mobileFonts: (
     }
 }
 
+
+html .section-title {
+    &.inner-page {
+        h2 {
+            padding-top: 3rem;
+            padding-bottom: calc(10rem - .6em);
+            padding-bottom: -webkit-calc(10rem - .6em);
+        }
+    }
+}
+
 @media #{$mobile} {
     @each $name, $value in $mobileFonts {
         #{$name} {
@@ -113,6 +124,18 @@ $mobileFonts: (
         &.large-title h2 {
             font-size: 4.5rem;
         }
+
+        // h2 {
+        //     margin-bottom: 5rem;
+        // }
+
+        &.inner-page {
+            h2 {
+                padding-top: 1rem;
+                padding-bottom: calc(4rem - .6em);
+                padding-bottom: -webkit-calc(4rem - .6em);
+            }
+        }
     }
 
     .grid-list-wrapper {
@@ -121,6 +144,12 @@ $mobileFonts: (
 				font-size: 4rem;
 			}
         }
+    }
+}
+
+.contact-form  {
+    span {
+        font-size: 1.6rem;
     }
 }
 
@@ -211,6 +240,21 @@ a {
 h2, h1 {
     margin-bottom: .6em !important;
     margin-top: 0 !important;
+}
+
+.large-title {
+
+    h2, h1 {
+        margin-bottom: .4em !important;
+        margin-top: 0 !important;
+    }
+}
+
+.large-title {
+
+    h2, h1 {
+        max-width: 14ch;
+    }
 }
 
 div p:not(:last-child) {
@@ -438,6 +482,11 @@ header {
             line-height: 1.1em;
         }
     }
+}
+
+.article-date {
+    font-size: 2.2rem;
+    font-style: italic;
 }
 
 .footer__content-bottom {

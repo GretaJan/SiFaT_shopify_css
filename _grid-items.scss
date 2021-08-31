@@ -66,13 +66,50 @@
 .logos-list {
 
     .image-block  {
+
         img {
             object-fit: contain;
             width: 100%;
         }
 
     }
-    
+}
+
+[class*="grid-gallery"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .image-block  {
+        img {
+            object-fit: contain;
+            max-width: 100%;
+        }
+
+    }
+}
+
+.small-grid-gallery {
+    .image-block  {
+        height: 155px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+}
+
+.medium-grid-gallery {
+
+    .image-block  {
+        height: 450px;
+        img {
+            max-height: 100%;
+        }
+    }
 }
 
 
@@ -173,17 +210,6 @@
 		}
     }
 }
-
-// .block-with-button {
-
-//     // h2 {
-//     //     font-weight: 300;
-//     // }
-//     // h2::first-line {
-//     //     font-weight: 700;
-//     //     color: $whiteColor;
-//     // }
-// }
 
 .img-top {
     h2 {
