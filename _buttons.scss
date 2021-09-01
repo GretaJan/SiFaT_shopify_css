@@ -13,6 +13,7 @@
     margin-top: 30px;
     @include fitContentWidth;
     border-radius: 3px;
+    cursor: pointer;
 
     &::after {
         content: '';
@@ -30,6 +31,10 @@
         width: 20px;
     }
 
+}
+
+.contacts-block .button {
+    margin-top: 40px;
 }
 
 .product-form__submit {
@@ -190,7 +195,7 @@
         }
 
         &::after {
-            background-image: url('arrows-lightblue.png');
+            background-image: url('arrows-yellow.png');
         }
     }
 }

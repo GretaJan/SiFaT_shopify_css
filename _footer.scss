@@ -14,6 +14,22 @@ footer {
         .footer__blocks-wrapper {
             @include sideWrap;
         }
+        
+        .footer-block:nth-child(2) {
+            a {
+                color: $lightBlue;
+            }
+            .footer-block__details-content > p:not(:last-child) {
+                margin-bottom: 27px;
+            }
+
+        }
+
+        .menu-links-wrap {
+            li:not(:last-child) {
+                margin-bottom: 27px;
+            }
+        }
 
         .grid__item:first-child {
             display: flex;

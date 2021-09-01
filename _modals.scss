@@ -96,11 +96,40 @@
 
         &::before {
             color: $whiteColor;
-            
 
         }
     }
 
+}
+
+.trigger-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: '✕';
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    &.dark-modal::before {
+        color: $whiteColor;
+    }
+
+    &.active {
+        display: flex;
+    }
+}
+
+.medium-modal-inner {
+    @include modalHorizontalWrap;
+    @include verticalWrap;
+    background-color: $whiteColor;
+    max-height: 95vh;
+    overflow: auto;
 }
 
 @media #{$desktop} {
@@ -112,6 +141,14 @@
                 right: 2vw;
                 top: 2vw;
             }
+        }
+    }
+
+    .trigger-modal {
+    
+        &::before {
+            right: 2vw;
+            top: 2vw;
         }
     }
 }
@@ -126,6 +163,14 @@
                 right: 4vw;
                 top: 4vw;
             }
+        }
+    }
+
+    .trigger-modal {
+    
+        &::before {
+            right: 4vw;
+            top: 4vw;
         }
     }
 }
