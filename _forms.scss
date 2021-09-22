@@ -34,9 +34,24 @@ form {
         width: 100% !important;
     }
 
+    .form__message {
+        padding-bottom: 1rem;
+        color: $lightBlue !important;
+    }
+
+}
+
+.form-modal {
+    cursor: default;
 }
 
 .contact-section {
+
+    .product-title {
+        border: 2px solid #001441 !important;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+    }
 
     .contact-form {
         margin-top: 3rem;
@@ -114,7 +129,39 @@ form {
                 'phone';
     
     }
+
+    .medium-modal-inner {
+        .txt-position-center {
+            span {
+                display: inline-block;
+            }
+
+        }
+        p.medium-top-bottom {
+            font-weight: 700;
+        }
+
+        .contact-form {
+            margin-top: 2rem;
+        }
+    }
     
+}
+
+.contact-section {
+    #ProductRequestForm {
+        .contact-fields {
+            .message {
+                textarea {
+                    height: 8em;
+                }
+            }
+        }
+
+        .button-wrap {
+            margin-top: 30px;
+        }
+    }
 }
 
 input, textarea {
@@ -131,8 +178,9 @@ input {
     height: 60px !important;
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
     color: $black !important;
+    opacity: 1;
 }
 
 .contact-section {
@@ -157,6 +205,15 @@ form.search {
     width: 24px;
 }
 
+.cart-items {
+    quantity-input {
+        height: 3rem;
+    }
+    .quantity__input {
+        height: 3rem !important;
+    }
+}
+
 @media #{$tablet} {
     .contact-section {
         .contact-fields {
@@ -165,6 +222,12 @@ form.search {
             'message message'
             'firstName lastName'
             'email phone';
+        }
+    }
+
+    #main-cart-footer {
+        .cart__ctas {
+            justify-content: flex-end;
         }
     }
 }

@@ -105,7 +105,7 @@
 
 
 
-@media (max-width: 1250px) {
+@media (max-width: 78.063rem) {
     .with-video-media {
         @include fitContentHeight;
         min-height: 0;
@@ -147,7 +147,7 @@
 
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 78.125rem) {
     .hero-block {
 
         .collection-hero__inner {
@@ -185,12 +185,47 @@
 
          .video-block {
 
-                    iframe {
-                        height: 400px !important;
-                    }
-                }
+            iframe {
+                height: 400px !important;
             }
+        }
+
+            .image-block:not(.video-img-block) {
+                img {
+                    height: 90%!important;
+                    max-height: 55rem;
+                }
+               
+            }
+        }
+            
     }
-   
+   .breadcrumbs-collection {
+    .image-block:not(.video-img-block) {
+        img {
+            height: 90% !important;
+            max-height: 55rem;
+        }
+     
+    }
+   }
 
 }
+
+// @media #{$fullhd} {
+//     html body {
+//         .hero-block {
+
+//             .image-block:not(.video-img-block) {
+//                 height: 100% !important;
+//             }
+//         }
+            
+//     }
+
+//     .breadcrumbs-collection {
+//         .image-block:not(.video-img-block) {
+//             height: 10rem !important;
+//         }
+//     }
+// }

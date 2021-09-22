@@ -215,15 +215,15 @@
 }
 
 
-@media #{$mobile} {
-    html body .carousel-text-middle {
-        .slide-content,  .collection-hero__excerpt {
-            padding-left: 10vw !important;
-            padding-right: 10vw !important;
-        }
+// @media #{$mobile} {
+    // html body .carousel-text-middle {
+    //     .slide-content,  .collection-hero__excerpt {
+    //         padding-left: 10vw !important;
+    //         padding-right: 10vw !important;
+    //     }
 
-    }
-}
+    // }
+// }
 
 @media #{$tabletMax} {
     .banner-section, .carousel-section {
@@ -242,6 +242,57 @@
         }
     
     
+    }
+}
+
+@media #{$mobile} {
+    .carousel-section{
+
+        .slide-content-inner {
+            margin-bottom: 3rem;
+        }
+        .txt-position-left {
+            text-align: center;
+        }
+
+        .btn-position-left {
+            a {
+                margin-right: auto;
+                margin-left: auto;
+            }
+          
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            margin-top: 35%;
+            z-index: 9;
+
+            &.large {
+                height: 30px;
+                width: 20px;
+            }
+        }
+
+        .swiper-button-prev {
+            margin-left: calc(100% - 4vw - 90px);
+        }
+
+        .swiper-button-next {
+            margin-left: calc(100% - 4vw - 25px);
+        }
+
+        .carousel-section-inner {
+            right: 4vw;
+
+            .video-link  {
+                justify-content: center;
+                .icon-play-item {
+                    opacity: .4;
+                    margin-bottom: 5vh;
+        
+                }
+            }
+        }
     }
 }
 
@@ -300,11 +351,13 @@
     }
 
     .swiper-button-prev {
-        left: 0;
+        // left: 0;
+        left: 4.5%;
     }
     
     .swiper-button-next {
-        right: 0;
+        // right: 0;
+        right: 4.5%;
     }
 
 
@@ -318,27 +371,36 @@
         }
     }
 
+    .swiper-container  {
 
-
-}
-
-@media #{$desktopMax} {
-    .carousel-text-middle {
-        
-        .slide-content {
-            padding-left: 4vw !important;
-            padding-right: 4vw !important;
+    
+        .button {
+            margin-top: 25px;
         }
-
-        .collection-hero__excerpt {
-            padding-left: 4vw !important;
-        }
+    
     }
 
+
 }
 
+// @media #{$desktopMax} {
+//     .carousel-text-middle {
+        
+//         .slide-content {
+//             padding-left: 4vw !important;
+//             padding-right: 4vw !important;
+//         }
 
-@media #{$desktop} {
+//         .collection-hero__excerpt {
+//             padding-left: 4vw !important;
+//         }
+//     }
+
+// }
+
+
+// @media #{$desktop} {
+@media #{$wide} {
     .carousel-grid-cols--2 {
         grid-auto-columns: 50%;
     }
@@ -406,11 +468,11 @@
     }
 
     .swiper-button-prev {
-        left: 0;
+        // left: 0;
     }
     
     .swiper-button-next {
-        right: 0;
+        // right: 0;
     }
 
     .carousel-section-inner {
@@ -450,9 +512,18 @@
             }
         }
     }
+
+    .swiper-container  {
+
+    
+        .button {
+            margin-top: 50px;
+        }
+    
+    }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 81.25rem) {
 
     .carousel-section-inner {
         .slide-link {
@@ -463,11 +534,11 @@
 
 @media (min-width: 1450px) {
     .swiper-button-prev {
-        left: 0px;
+        // left: 0px;
     }
     
     .swiper-button-next {
-        right: 0px;
+        // right: 0px;
     }
 
     .carousel-section-inner {
@@ -478,25 +549,25 @@
 
 }
 
-@media (min-width: 1480px) {
+@media (min-width: 92.5rem) {
     .swiper-button-prev {
-        left: 0px;
+        // left: 0px;
     }
     
     .swiper-button-next {
-        right: 0px;
+        // right: 0px;
     }
 
 }
 
 
-@media (min-width: 1600px) {
+@media (min-width: 100rem) {
     .swiper-button-prev {
-        left: 2vw;
+        // left: 2vw;
     }
     
     .swiper-button-next {
-        right: 2vw;
+        // right: 2vw;
     }
 
     .product-gallery-wrap {

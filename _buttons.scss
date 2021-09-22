@@ -30,16 +30,19 @@
         height: 18px;
         width: 20px;
     }
-
 }
 
 .contacts-block .button {
     margin-top: 40px;
 }
 
-.product-form__submit {
-    cursor: pointer;
+.price-inner-wrap .button[data-product_request] {
+    margin-top: 0;
 }
+
+// .product-form__submit {
+//     cursor: pointer;
+// }
 
 .button.small {
     &::after {

@@ -1,6 +1,6 @@
 .full-modal {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,8 +104,6 @@
 
 .trigger-modal {
     display: none;
-    justify-content: center;
-    align-items: center;
 
     &::before {
         content: '✕';
@@ -126,7 +124,7 @@
 
 .medium-modal-inner {
     @include modalHorizontalWrap;
-    @include verticalWrap;
+    @include verticalWrap-smallmedium;
     background-color: $whiteColor;
     max-height: 95vh;
     overflow: auto;

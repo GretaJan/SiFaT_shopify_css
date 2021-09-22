@@ -1,0 +1,32 @@
+.template-search {
+
+    form.search {
+        // max-width: 35rem;
+        margin: 0 auto;
+        border: 1px solid $darkerBlue !important;
+
+        input {
+            max-width: calc(35rem - 58px);
+        }
+    }
+
+    .search-item {
+        .image-block {
+            height: 380px;
+            display: flex;
+
+            img {
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media #{$tablet} {
+    .template-search {
+
+        form.search {
+            margin: 0;
+        }
+    }
+}

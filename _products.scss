@@ -4,8 +4,9 @@
 
 
     .product-outer {
-        // @include sideWrap;
-
+        .product-inner {
+            @include verticalWrap-top;
+        }
 
         .product-gallery-wrap { 
             grid-area: gallery;

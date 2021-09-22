@@ -69,7 +69,7 @@ html {
 }
 
 $fonts: (
-    "h1" : 8rem,
+    "h1" : 7.2rem,
     "h2" : 5rem, 
 	"h3" : 3.6rem, 
     "h4" : 3.2rem, 
@@ -84,7 +84,7 @@ $fonts: (
 
 
 $mobileFonts: (
-    "h1" : 5rem,
+    "h1" : 4.9rem,
     "h2" : 4rem, 
 	"h3" : 3rem, 
     "h4" : 2.5rem, 
@@ -92,16 +92,24 @@ $mobileFonts: (
     "p": 2.3rem, 
 );
 
+.h2 {
+    font-size: 5rem;
+}
+
 @each $name, $value in $fonts {
     #{$name} {
         font-size: $value;
+    }
+
+    .h2 {
+        font-size: 4rem;
     }
 }
 
 
 html .section-title {
     &.inner-page {
-        h2 {
+        h2, .h2 {
             padding-top: 3rem;
             padding-bottom: calc(10rem - .6em);
             padding-bottom: -webkit-calc(10rem - .6em);
@@ -130,7 +138,7 @@ html .section-title {
         // }
 
         &.inner-page {
-            h2 {
+            h2, .h2 {
                 padding-top: 1rem;
                 padding-bottom: calc(4rem - .6em);
                 padding-bottom: -webkit-calc(4rem - .6em);
@@ -145,6 +153,10 @@ html .section-title {
 			}
         }
     }
+
+    .button:not(.small), .shopify-payment-button__button {
+        font-size: 2.8rem !important;
+     }
 }
 
 .contact-form  {
@@ -163,7 +175,7 @@ h1, h2, h3, h4, h6 {
     font-weight: 700;
 }
 
-h4, h1, h2, h3, h4, h5, h6 {
+h4, h1, h2, .h2, h3, h4, h5, h6 {
     span {
         font-weight: 300;
         // font-style: light italic;
@@ -174,7 +186,7 @@ h5 {
     // font-style: bold italic lighter;
     font-weight: 500;
 }
-h2, h3, h4, h5, h6, p, a {
+h2, .h2, h3, h4, h5, h6, p, a {
     line-height: 1.2em;
 }
 
@@ -193,7 +205,7 @@ h4 {
     margin-bottom: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, input, textarea {
+h1, h2, .h2, h3, h4, h5, h6, p, a, input, textarea {
     font-family: "Kanit" !important;
 }
 
@@ -243,14 +255,14 @@ a {
     color: $black;
 }
 
-h2, h1 {
+h2, .h2, h1 {
     margin-bottom: .6em !important;
     margin-top: 0 !important;
 }
 
 .large-title {
 
-    h2, h1 {
+    h2, .h2, h1 {
         margin-bottom: .4em !important;
         margin-top: 0 !important;
     }
@@ -258,7 +270,7 @@ h2, h1 {
 
 .large-title {
 
-    h2, h1 {
+    h2, .h2, h1 {
         max-width: 18ch;
     }
 }
@@ -272,31 +284,31 @@ html body a {
 }
 
 .announcement-bar {
-    h1, h2, h3, h4, h5, p, a, span {
+    h1, h2, .h2, h3, h4, h5, p, a, span {
         font-size: 1.6rem !important;
         font-weight: 700;
         color: $whiteColor;
     }
 }
 
-a[href*="http"], a[href*="https"], .product__description a {
+a[href*="http"]:not(.list-social__link):not(.contacts-block a), a[href*="https"]:not(.list-social__link):not(.contacts-block a), .product__description a {
     color: $lightBlue;
 }
 
 
 .textAlignLeft {
-    h1, h2, h3, h4, h5, p {
+    h1, h2, .h2, h3, h4, h5, p {
         text-align: left;
     }
 }
 .textAlignRight {
-    h1, h2, h3, h4, h5, p {
+    h1, h2, .h2, h3, h4, h5, p {
         display: block;
         text-align: right;
     }
 }
 .textAlignCenter {
-    h1, h2, h3, h4, h5, p {
+    h1, h2, .h2, h3, h4, h5, p {
         display: block;
         text-align: center;
     }
@@ -305,7 +317,7 @@ a[href*="http"], a[href*="https"], .product__description a {
 
 section.slideshow {
     .slideshow-slide__heading {
-        font-size: 8rem !important;
+        font-size: 7.2rem !important;
         font-weight: 700 !important;
         line-height: 1em !important;
     }
@@ -330,13 +342,16 @@ section.slideshow {
 }
 
 .shopify-section-announcement-bar {
-    h1, h2, h3, h4, h5, h6, p, a {
+    h1, h2, .h2, h3, h4, h5, h6, p, a {
         color: $whiteColor;
     }
 }
 
 header {
     .list-menu {
+        span {
+            font-style: italic;
+        }
         & > li {
             a, span {
                 font-size: 2.2rem !important;
@@ -389,6 +404,27 @@ header {
     }
 }
 
+@media #{$tabletMax} {
+    header {
+        .list-menu {
+            .header-submenu-inner {
+                a {
+                    .submenu-item-link-level-0 {
+                        font-size: 2.5rem !important;
+                    }
+                }
+
+                a {
+                    .submenu-item-link-level-1, .submenu-item-link-level-2 {
+                        font-size: 2.4rem !important;
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
 .breadcrumbs a {
     color: $lightBlue;
     font-size: 2.2rem;
@@ -426,7 +462,7 @@ header {
 .white-txt {
     color: $whiteColor !important;
 
-    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    p, a, h1, h2, .h2, h3, h4, h5, h4, span, a {
     color: $whiteColor!important;
     }
 }
@@ -435,7 +471,7 @@ header {
 .black-txt {
     color: $black !important;
 
-    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    p, a, h1, h2, .h2, h3, h4, h5, h4, span, a {
         color: $black !important;
     }
 
@@ -445,7 +481,7 @@ header {
 .darkblue-txt {
     color: $darkBlue !important;
 
-    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    p, a, h1, h2, .h2, h3, h4, h5, h4, span, a {
     color: $darkBlue !important;
     }
 
@@ -454,7 +490,7 @@ header {
 .lightblue-txt {
     color: $lightBlue !important;
 
-    p, h1, h2, h3, h4, h5, h4, span, a {
+    p, h1, h2, .h2, h3, h4, h5, h4, span, a {
         color: $lightBlue !important;
     }
 
@@ -464,7 +500,7 @@ header {
 .red-txt {
     color: $red !important;
 
-    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    p, a, h1, h2, .h2, h3, h4, h5, h4, span, a {
     color: $red !important;
     }
 
@@ -473,7 +509,7 @@ header {
 .yellow-txt {
     color: $yellow !important;
 
-    p, a, h1, h2, h3, h4, h5, h4, span, a {
+    p, a, h1, h2, .h2, h3, h4, h5, h4, span, a {
     color: $yellow!important;
     }
 }
@@ -487,7 +523,7 @@ header {
     }
 
     &.large-title h2 {
-        font-size: 8rem;
+        font-size: 7.2rem;
         line-height: 1em;
     }
 

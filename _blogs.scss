@@ -3,7 +3,7 @@
 section.blogposts, .blog-articles {
 	
 	.article-item {
-		.artice-image-block {
+		.article-image-block {
 			img {
 				height: 45vh;
 				width: 100%;
@@ -29,6 +29,13 @@ section.blogposts, .blog-articles {
 	}
 }
 
+.template-search__results {
+	.card__content {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 
 @media #{$tablet} {
 	section.blogposts, .blog-articles {
@@ -41,7 +48,7 @@ section.blogposts, .blog-articles {
 
 		.article-item {
 
-			.artice-image-block {
+			.article-image-block {
 				overflow: hidden;
 
 				img {
@@ -65,7 +72,7 @@ section.blogposts, .blog-articles {
 
 		.article-item {
 
-			.artice-image-block {
+			.article-image-block {
 				img {
 					height: 400px;
 				}
